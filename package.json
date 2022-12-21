@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "name": "food_delivery",
+  "private":true,
+  "author": {
+    "name": "thanhd",
+    "email": "thanhdanh@icd-vn.com",
+    "url": "https://fb.com/danh.thanh.418"
+  },
+  "scripts": {
+    "develop":"concurrently -k \"yarn backend\" \"yarn frontend\"",
+    "frontend":"yarn --cwd frontend dev",
+    "backend":"yarn --cwd backend develop"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  },
+  "license": "MIT"
+}
