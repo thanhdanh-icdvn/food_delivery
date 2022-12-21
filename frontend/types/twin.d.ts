@@ -19,4 +19,9 @@ declare module 'react' {
   interface SVGProps<T> extends SVGProps<SVGSVGElement> {
     css?: CSSInterpolation;
   }
+  // The tw and css prop
+  interface DOMAttributes<T> {
+    tw?: string;
+    css?: CSSInterpolation;
+  }
 }
