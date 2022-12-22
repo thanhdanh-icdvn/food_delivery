@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // twin.d.ts
 import 'twin.macro';
 import { css as cssImport } from '@emotion/react';
@@ -13,6 +14,7 @@ declare module 'twin.macro' {
 declare module 'react' {
   // The css prop
   interface HTMLAttributes<T> extends DOMAttributes<T> {
+    tw?: string;
     css?: CSSInterpolation;
   }
   // The inline svg css prop

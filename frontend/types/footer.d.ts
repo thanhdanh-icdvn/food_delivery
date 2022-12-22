@@ -1,1 +1,3 @@
-type FooterProps = {};
+type FooterProps = {
+  className?: string;
+};

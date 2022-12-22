@@ -1,19 +1,23 @@
 {
   "version": "1.0.0",
   "name": "food_delivery",
-  "private":true,
+  "private": true,
   "author": {
     "name": "thanhd",
     "email": "thanhdanh@icd-vn.com",
     "url": "https://fb.com/danh.thanh.418"
   },
   "scripts": {
-    "develop":"concurrently -k \"yarn backend\" \"yarn frontend\"",
-    "frontend":"yarn --cwd frontend dev",
-    "backend":"yarn --cwd backend develop"
+    "develop": "concurrently -k \"yarn backend\" \"yarn frontend\"",
+    "frontend": "yarn --cwd frontend dev",
+    "backend": "yarn --cwd backend develop",
+    "prepare": "husky install"
   },
   "devDependencies": {
-    "concurrently": "^7.6.0"
+    "concurrently": "^7.6.0",
+    "husky": "^8.0.2",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.1"
   },
   "license": "MIT"
 }

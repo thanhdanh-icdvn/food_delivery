@@ -1,1 +1,3 @@
-type HeaderProps = {};
+type HeaderProps = {
+  className?: string;
+};

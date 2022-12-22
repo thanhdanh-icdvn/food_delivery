@@ -1,7 +1,15 @@
 import tw, { styled } from 'twin.macro';
 
 const Button = styled.button<ButtonProps>(
-  ({ variant = 'primary', size = 'base', outlined = false, disabled = false, pill = false, full = false, inlineFlex = false }: ButtonProps) => [
+  ({
+    variant = 'primary',
+    size = 'base',
+    outlined = false,
+    disabled = false,
+    pill = false,
+    full = false,
+    inlineFlex = false,
+  }: ButtonProps) => [
     tw`
     rounded-md
     focus:outline-none 
@@ -24,52 +32,52 @@ const Button = styled.button<ButtonProps>(
     full && tw`w-full`,
     outlined === true &&
       variant === 'dark' &&
-      tw`text-dark-800 hover:text-white border border-dark-800 hover:bg-dark-900 focus:ring-4 focus:outline-none focus:ring-dark-300`,
+      tw`text-dark-800 hover:text-white border border-dark-800 hover:bg-dark-900 focus:ring-2 focus:outline-none focus:ring-dark-300`,
     outlined === true &&
       variant === 'warning' &&
-      tw`text-warning-600 hover:text-white border border-warning-500 hover:bg-warning-600 focus:ring-4 focus:outline-none focus:ring-dark-300`,
+      tw`text-warning-600 hover:text-white border border-warning-500 hover:bg-warning-600 focus:ring-2 focus:outline-none focus:ring-dark-300`,
     outlined === true &&
       variant === 'pending' &&
-      tw`text-pending-600 hover:text-white border border-pending-600 hover:bg-pending-700 focus:ring-4 focus:outline-none focus:ring-pending-300`,
+      tw`text-pending-600 hover:text-white border border-pending-600 hover:bg-pending-700 focus:ring-2 focus:outline-none focus:ring-pending-300`,
     outlined === true &&
       variant === 'success' &&
-      tw`text-success-600 hover:text-white border border-success-500 hover:bg-success-600 focus:ring-4 focus:outline-none focus:ring-success-300`,
+      tw`text-success-600 hover:text-white border border-success-500 hover:bg-success-600 focus:ring-2 focus:outline-none focus:ring-success-300`,
     outlined === true &&
       variant === 'danger' &&
-      tw`text-danger-600 hover:text-white border border-danger-500 hover:bg-danger-600 focus:ring-4 focus:outline-none focus:ring-danger-300`,
+      tw`text-danger-600 hover:text-white border border-danger-500 hover:bg-danger-600 focus:ring-2 focus:outline-none focus:ring-danger-300`,
     outlined === true &&
       variant === 'info' &&
-      tw`text-info-500 hover:text-white border border-info-500 hover:bg-info-600 focus:ring-4 focus:outline-none focus:ring-info-300`,
+      tw`text-info-500 hover:text-white border border-info-500 hover:bg-info-600 focus:ring-2 focus:outline-none focus:ring-info-300`,
     outlined == true &&
       variant === 'secondary' &&
-      tw`text-secondary-400 hover:text-white border border-secondary-300 hover:bg-secondary-500 focus:ring-4 focus:outline-none focus:ring-secondary-300`,
+      tw`text-secondary-400 hover:text-white border border-secondary-300 hover:bg-secondary-500 focus:ring-2 focus:outline-none focus:ring-secondary-300`,
     outlined == true &&
       variant === 'primary' &&
-      tw`text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300`,
+      tw`text-primary-700 hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-2 focus:outline-none focus:ring-primary-300`,
     outlined === false &&
       variant === 'dark' &&
-      tw`bg-dark-800 text-white hover:text-white border border-dark-800 hover:bg-dark-900 focus:ring-4 focus:outline-none focus:ring-dark-300`,
+      tw`bg-dark-800 text-white hover:text-white border border-dark-800 hover:bg-dark-900 focus:ring-2 focus:outline-none focus:ring-dark-300`,
     outlined === false &&
       variant === 'warning' &&
-      tw`bg-warning-500 text-gray-900 hover:text-gray-900 border border-warning-500 hover:bg-warning-600 focus:ring-4 focus:outline-none focus:ring-dark-300`,
+      tw`bg-warning-500 text-gray-900 hover:text-gray-900 border border-warning-500 hover:bg-warning-600 focus:ring-2 focus:outline-none focus:ring-dark-300`,
     outlined === false &&
       variant === 'pending' &&
-      tw`bg-pending-600 text-white hover:text-white border border-pending-600 hover:bg-pending-700 focus:ring-4 focus:outline-none focus:ring-pending-300`,
+      tw`bg-pending-600 text-white hover:text-white border border-pending-600 hover:bg-pending-700 focus:ring-2 focus:outline-none focus:ring-pending-300`,
     outlined === false &&
       variant === 'success' &&
-      tw`bg-success-500  text-white hover:text-white border border-success-500 hover:bg-success-600 focus:ring-4 focus:outline-none focus:ring-success-300`,
+      tw`bg-success-500  text-white hover:text-white border border-success-500 hover:bg-success-600 focus:ring-2 focus:outline-none focus:ring-success-300`,
     outlined === false &&
       variant === 'danger' &&
-      tw`bg-danger-500 text-white hover:text-white border border-danger-500 hover:bg-danger-600 focus:ring-4 focus:outline-none focus:ring-danger-300`,
+      tw`bg-danger-500 text-white hover:text-white border border-danger-500 hover:bg-danger-600 focus:ring-2 focus:outline-none focus:ring-danger-300`,
     outlined === false &&
       variant === 'info' &&
-      tw`bg-info-500  text-white hover:text-white border border-info-500 hover:bg-info-600 focus:ring-4 focus:outline-none focus:ring-info-300`,
+      tw`bg-info-500  text-white hover:text-white border border-info-500 hover:bg-info-600 focus:ring-2 focus:outline-none focus:ring-info-300`,
     outlined == false &&
       variant === 'secondary' &&
-      tw`bg-secondary-400 text-gray-900 hover:text-gray-900 border border-secondary-300 hover:bg-secondary-500 focus:ring-4 focus:outline-none focus:ring-secondary-300`,
+      tw`bg-secondary-400 text-gray-900 hover:text-gray-900 border border-secondary-300 hover:bg-secondary-500 focus:ring-2 focus:outline-none focus:ring-secondary-300`,
     outlined == false &&
       variant === 'primary' &&
-      tw`bg-primary-700 text-white hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300`,
+      tw`bg-primary-700 text-white hover:text-white border border-primary-700 hover:bg-primary-800 focus:ring-2 focus:outline-none focus:ring-primary-300`,
   ]
 );
 export default Button;

@@ -10,16 +10,27 @@
     "node": true,
     "es6": true
   },
-  "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  "extends": [
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/strict",
+    "prettier"
+  ],
   "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["react", "jsx-a11y", "@typescript-eslint"],
   "root": true,
   "ignorePatterns": ["node_modules/**/*"],
   "rules": {
+    "react-hooks/exhaustive-deps": "error",
     "quotes": [2, "single", { "avoidEscape": true }],
+    "no-var": "error",
     "prefer-const": "error",
-    "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/no-explicit-any": "error",
+    "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/quotes": [
       "error",
       "single",

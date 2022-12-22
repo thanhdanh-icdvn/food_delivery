@@ -1,12 +1,14 @@
+import React from 'react';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 
-export const Main = ({ children }: MainLayoutProps) => {
+const MainLayout = ({ children }: MainLayoutProps) => {
   return (
     <>
-      <Header />
+      <Header className='header-main' />
       <main>{children}</main>
-      <Footer />
+      <Footer className='footer-main' />
     </>
   );
 };
+export default MainLayout;
