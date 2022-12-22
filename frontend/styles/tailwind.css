@@ -3,8 +3,20 @@
 @tailwind utilities;
 
 @layer components {
+  /* Header and Footer */
   .header-main,
   .footer-main {
-    @apply bg-main-500 text-white font-medium px-2 sm:px-4 py-2.5;
+    @apply bg-main-500 text-white font-medium p-3;
+  }
+  /* Main content wrapper */
+  .main {
+    @apply relative flex flex-row flex-wrap w-full bg-gray-200;
+  }
+  /* Sidebar */
+  .sidebar {
+    @apply w-full md:w-4/12 lg:w-3/12 xl:w-3/12 p-3;
+  }
+  .content {
+    @apply w-full md:w-8/12 lg:w-9/12 xl:w-9/12 p-3;
   }
 }

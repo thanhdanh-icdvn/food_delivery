@@ -118,6 +118,9 @@ module.exports = {
       textColor: colorPalette,
       borderColor: colorPalette,
       background: colorPalette,
+      ringWidth: {
+        3: '3px',
+      },
       boxShadow: {
         'mat-0': 'none',
         'mat-1':

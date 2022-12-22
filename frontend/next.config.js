@@ -2,6 +2,9 @@ const withTwin = require('./withTwin');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['mdbcdn.b-cdn.net'],
+  },
   webpack: config => {
     config.resolve.fallback = {
       ...config.resolve.fallback, // if you miss it, all the other options in fallback, specified
