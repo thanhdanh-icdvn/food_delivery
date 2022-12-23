@@ -1,5 +1,5 @@
 type ButtonSizeProps = 'xs' | 'sm' | 'base' | 'lg' | 'xl';
-type TailwinddVariantProps =
+type ButtonVariantProps =
   | 'primary'
   | 'secondary'
   | 'info'
@@ -12,8 +12,8 @@ type TailwinddVariantProps =
   | 'main';
 type ButtonProps = {
   disabled?: boolean;
-  variant?: TailwinddVariantProps;
-  size?: TailwindButtonSize;
+  variant?: ButtonVariantProps;
+  size?: ButtonSizeProps;
   outlined?: boolean;
   pill?: boolean;
   full?: boolean;

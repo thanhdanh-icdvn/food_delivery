@@ -1,3 +1,3 @@
-type MainLayoutProps = {
+type LayoutProps = {
   children?: React.ReactNode;
 };

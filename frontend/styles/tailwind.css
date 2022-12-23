@@ -10,7 +10,7 @@
   }
   /* Main content wrapper */
   .main {
-    @apply relative flex flex-row flex-wrap w-full bg-gray-200;
+    @apply w-full relative flex flex-row flex-wrap bg-gray-200;
   }
   /* Sidebar */
   .sidebar {

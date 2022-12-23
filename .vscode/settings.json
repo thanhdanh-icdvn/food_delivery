@@ -4,5 +4,19 @@
   },
   // Add those two lines:
   "editor.formatOnSave": true, // Tell VSCode to format files on save
-  "editor.defaultFormatter": "esbenp.prettier-vscode" // Tell VSCode to use Prettier as default file formatter
+  "editor.defaultFormatter": "esbenp.prettier-vscode", // Tell VSCode to use Prettier as default file formatter
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)", // tw`...`
+    "tw=\"([^\"]*)", // <div tw="..." />
+    "tw={\"([^\"}]*)", // <div tw={"..."} />
+    "tw\\.\\w+`([^`]*)", // tw.xxx`...`
+    "tw\\(.*?\\)`([^`]*)" // tw(Component)`...`
+  ],
+  "tailwindCSS.includeLanguages": {
+    "typescript": "javascript",
+    "typescriptreact": "javascript"
+  },
+  "scss.lint.unknownAtRules": "ignore",
+  "css.lint.unknownProperties": "ignore",
+  "css.lint.unknownAtRules": "ignore"
 }

@@ -3,8 +3,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import Button from '../components/button/Button';
+import { layouts } from './_app';
 
-const Login = () => {
+const Login = (): PageProps => {
   return (
     <>
       <Head>
@@ -13,7 +14,7 @@ const Login = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <section className='gradient-form md:h-screen flex flex-col justify-center items-center'>
+      <section className='flex flex-col justify-center items-center h-screen'>
         <div className='container'>
           <div className='flex justify-center items-center flex-wrap text-gray-800'>
             <div className=''>
@@ -59,8 +60,8 @@ const Login = () => {
                         </div>
                         <div className='flex items-center justify-between pb-6'>
                           <p className='mb-0 mr-2'>Don&apos;t have an account?</p>
-                          <Button type='button' variant='danger' outlined>
-                            Danger
+                          <Button type='button' variant='primary' outlined size='sm'>
+                            Register
                           </Button>
                         </div>
                       </form>
@@ -88,5 +89,5 @@ const Login = () => {
     </>
   );
 };
-
+Login.layout = layouts.MainNoHeadereNoFooter;
 export default Login;
