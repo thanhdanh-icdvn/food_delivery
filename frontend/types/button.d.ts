@@ -8,8 +8,7 @@ type ButtonVariantProps =
   | 'danger'
   | 'pending'
   | 'dark'
-  | 'success'
-  | 'main';
+  | 'success';
 type ButtonProps = {
   disabled?: boolean;
   variant?: ButtonVariantProps;
@@ -18,4 +17,5 @@ type ButtonProps = {
   pill?: boolean;
   full?: boolean;
   inlineFlex?: boolean;
+  wide?: boolean;
 };

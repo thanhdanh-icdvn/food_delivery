@@ -6,17 +6,52 @@
   /* Header and Footer */
   .header-main,
   .footer-main {
-    @apply bg-main-500 text-white font-medium p-3;
+    @apply bg-dark-100 text-secondary font-medium p-3 dark:bg-dark-800 dark:text-secondary-100;
+  }
+  .header-main {
+    @apply flex flex-row justify-between items-start;
+  }
+  .header--left {
+    @apply w-auto;
+  }
+  .header--right {
+    @apply w-auto inline-flex flex-row justify-end;
   }
   /* Main content wrapper */
   .main {
     @apply w-full relative flex flex-row flex-wrap bg-gray-200;
+  }
+  /* Main__inner */
+  .main .main__inner {
+    @apply container mx-auto flex flex-col;
   }
   /* Sidebar */
   .sidebar {
     @apply w-full md:w-4/12 lg:w-3/12 xl:w-3/12 p-3;
   }
   .content {
+    @apply w-full;
+  }
+  .content.has-sidebar {
     @apply w-full md:w-8/12 lg:w-9/12 xl:w-9/12 p-3;
+  }
+
+  /* Profile page */
+
+  .profile {
+    @apply flex flex-row flex-wrap;
+  }
+  .profile .profile__summary {
+    @apply flex w-[calc(25%)];
+  }
+  .profile .profile__details {
+    @apply flex flex-col w-[calc(75%)];
+  }
+
+  .profile__details > .details {
+    @apply m-3;
+  }
+  .profile__details > .details > .details__experiences {
+    @apply m-3;
   }
 }

@@ -1,9 +1,14 @@
+const path = require('path');
 const withTwin = require('./withTwin');
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
     domains: ['mdbcdn.b-cdn.net'],
+  },
+  // The sass path
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')],
   },
   webpack: config => {
     config.resolve.fallback = {
