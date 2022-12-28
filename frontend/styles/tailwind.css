@@ -4,12 +4,15 @@
 
 @layer components {
   /* Header and Footer */
+  body {
+    @apply text-secondary;
+  }
   .header-main,
   .footer-main {
-    @apply bg-dark-100 text-secondary font-medium p-3 dark:bg-dark-800 dark:text-secondary-100;
+    @apply bg-white text-secondary font-medium p-3;
   }
   .header-main {
-    @apply flex flex-row justify-between items-start;
+    @apply flex flex-row justify-between items-start shadow-mat-1;
   }
   .header--left {
     @apply w-auto;
@@ -19,7 +22,7 @@
   }
   /* Main content wrapper */
   .main {
-    @apply w-full relative flex flex-row flex-wrap bg-gray-200;
+    @apply w-full relative flex flex-row flex-wrap;
   }
   /* Main__inner */
   .main .main__inner {
@@ -29,6 +32,8 @@
   .sidebar {
     @apply w-full md:w-4/12 lg:w-3/12 xl:w-3/12 p-3;
   }
+
+  /* Content */
   .content {
     @apply w-full;
   }
@@ -37,7 +42,6 @@
   }
 
   /* Profile page */
-
   .profile {
     @apply flex flex-row flex-wrap;
   }
@@ -53,5 +57,29 @@
   }
   .profile__details > .details > .details__experiences {
     @apply m-3;
+  }
+
+  /* Index page */
+  .banner {
+    background-image: url('../assets/font/1.png');
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: 556px 556px;
+    background-origin: inherit;
+    padding: 276px 0;
+    @apply flex flex-row bg-[length:276px_276px];
+  }
+  .banner > .banner__content {
+    @apply flex flex-col justify-center gap-2;
+  }
+  .banner > .banner__content > .banner__heading {
+    text-shadow: #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px,
+      #fff 0px 0px 2px;
+    @apply font-black text-[56px] leading-[1.25] md:text-[75px] md:leading-[1.5];
+  }
+  .banner > .banner__content > .banner__description {
+    text-shadow: #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px,
+      #fff 0px 0px 2px;
+    @apply text-xl md:text-3xl leading-[1.25] md:leading-[1.5];
   }
 }

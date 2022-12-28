@@ -19,14 +19,14 @@ const Button = styled.button<ButtonProps>(
     duration-300
   `,
     size === 'xs'
-      ? tw`py-2 px-3 text-xs`
+      ? tw`px-3 py-1.5 text-xs`
       : size === 'sm'
-      ? tw`py-2 px-3 text-sm`
+      ? tw`px-4 py-1.5 text-sm`
       : size === 'lg'
-      ? tw`py-3 px-5 text-lg font-medium`
+      ? tw`px-7 py-3 text-lg`
       : size === 'xl'
-      ? tw`py-3.5 px-6 text-xl font-medium`
-      : tw`py-2.5 px-5 text-base`,
+      ? tw`px-8 py-4 text-xl`
+      : tw`px-6 py-2 text-base`,
     inlineFlex && tw`inline-flex`,
     pill === true && tw`rounded-full`,
     disabled === true && tw`cursor-not-allowed opacity-80`,
@@ -55,7 +55,7 @@ const Button = styled.button<ButtonProps>(
       tw`text-secondary-400 hover:text-white border-2 border-secondary-300 hover:bg-secondary-500 focus:ring-4 focus:outline-none focus:ring-secondary-300`,
     outlined == true &&
       variant === 'primary' &&
-      tw`text-primary-400 hover:text-white border-2 border-primary-400 hover:bg-primary-500 focus:ring-4 focus:outline-none focus:ring-primary-300`,
+      tw`text-primary hover:text-white border-2 border-primary hover:bg-primary-400 focus:ring-4 focus:outline-none focus:ring-primary-200`,
     outlined === false &&
       variant === 'dark' &&
       tw`bg-dark-800 text-white hover:text-white border border-dark-800 hover:bg-dark-900 focus:ring-4 focus:outline-none focus:ring-dark-300`,
@@ -79,7 +79,7 @@ const Button = styled.button<ButtonProps>(
       tw`bg-secondary-400 text-gray-900 hover:text-gray-900 border border-secondary-300 hover:bg-secondary-500 focus:ring-4 focus:outline-none focus:ring-secondary-300`,
     outlined == false &&
       variant === 'primary' &&
-      tw`bg-primary-400 text-white hover:text-white border border-primary-400 hover:bg-primary-500 focus:ring-4 focus:outline-none focus:ring-primary-300`,
+      tw`bg-primary text-white hover:text-white border border-primary hover:bg-primary-400 focus:ring-4 focus:outline-none focus:ring-primary-200`,
   ]
 );
 export default Button;

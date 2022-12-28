@@ -12,7 +12,7 @@ const colorPalette = {
     700: '#b74806',
     800: '#94370c',
     900: '#7a2e0d',
-    DEFAULT: '#ffb320',
+    DEFAULT: '#ffd163',
   },
   secondary: {
     50: '#f7f7f7',
@@ -133,7 +133,10 @@ module.exports = {
         'mat-3':
           '0px 3px 3px -2px rgb(0 0 0 / 20%), 0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%)',
       },
+      borderRadius: {
+        15: '15px',
+      },
     },
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/line-clamp')],
 };

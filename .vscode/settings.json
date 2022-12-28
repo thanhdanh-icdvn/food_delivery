@@ -18,5 +18,8 @@
   },
   "scss.lint.unknownAtRules": "ignore",
   "css.lint.unknownProperties": "ignore",
-  "css.lint.unknownAtRules": "ignore"
+  "css.lint.unknownAtRules": "ignore",
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  }
 }
