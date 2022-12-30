@@ -1,11 +1,15 @@
+import Image from 'next/image';
 import React from 'react';
 import Button from '../../components/button/Button';
+import logo from '../../assets/images/logo.png';
 
 const Header = ({ className }: HeaderProps) => {
   return (
     <header className={`${className ?? ''}`}>
       <div className='container flex flex-center justify-between mx-auto'>
-        <div className='header--left'>Logo</div>
+        <div className='header--left'>
+          <Image src={logo} alt='Logo' width={48} height={48} />
+        </div>
         <div className='header--right'>
           <ul className='inline-flex flex-row flex-wrap justify-end items-center gap-4'>
             <li>Home</li>

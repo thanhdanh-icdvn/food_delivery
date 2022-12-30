@@ -51,7 +51,7 @@ const Login = (): PageProps => {
                           />
                         </div>
                         <div className='text-center pt-1 mb-12 pb-1'>
-                          <Button type='button' full variant='main'>
+                          <Button type='button' full variant='primary'>
                             Log in
                           </Button>
                           <Link className='text-gray-500' href='#!'>

@@ -5,14 +5,14 @@
 @layer components {
   /* Header and Footer */
   body {
-    @apply text-secondary;
+    @apply text-secondary leading-[1.5];
   }
   .header-main,
   .footer-main {
     @apply bg-white text-secondary font-medium p-3;
   }
   .header-main {
-    @apply flex flex-row justify-between items-start shadow-mat-1;
+    @apply flex flex-row justify-between items-start shadow-mat-1 z-10;
   }
   .header--left {
     @apply w-auto;
@@ -61,7 +61,7 @@
 
   /* Index page */
   .banner {
-    background-image: url('../assets/font/1.png');
+    background-image: url('../assets/images/1.png');
     background-position: right center;
     background-repeat: no-repeat;
     background-size: 556px 556px;
@@ -81,5 +81,101 @@
     text-shadow: #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px,
       #fff 0px 0px 2px;
     @apply text-xl md:text-3xl leading-[1.25] md:leading-[1.5];
+  }
+
+  /* Common section class */
+
+  .section__heading {
+    @apply m-0;
+  }
+  .section__title {
+    @apply text-center text-[2.5rem] leading-[1.6] capitalize;
+  }
+  .section__sub-title {
+    @apply text-center text-[1.875rem] leading-[1.5] font-light;
+  }
+  /* Why fast food */
+  .why-fast-food {
+    position: relative;
+    background-image: url('../assets/images/cake.png'), url('../assets/images/circle_02.png'),
+      url('../assets//images/circle_03.png'), url('../assets/images/circle_01.png');
+    background-position: left, bottom center, top center, right;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: contain, auto, auto, auto;
+  }
+  .fast-food-list {
+    @apply relative flex flex-row flex-wrap md:py-10;
+  }
+
+  .fast-food-item {
+    @apply flex w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-3rem)] m-2 md:m-4 lg:m-6;
+  }
+  .fast-food-card {
+    @apply relative flex flex-col items-center bg-primary-100 w-full rounded-3xl;
+  }
+  .fast-food-card > .fast-food-card__top {
+    @apply overflow-auto;
+  }
+  .fast-food-card > .fast-food-card__top > .fast-food-card__featured-image {
+    @apply object-cover aspect-square max-w-[300px];
+  }
+  .fast-food-card > .fast-food-card__bottom {
+    @apply mt-[-10%] pb-[10%] flex flex-col items-center justify-center text-center px-14 text-tertiary;
+  }
+  .fast-food-card > .fast-food-card__bottom > .fast-food-card__title {
+    @apply font-bold text-[33px] leading-[50px];
+  }
+  .fast-food-card > .fast-food-card__bottom > .fast-food-card__description {
+    @apply text-[1.25rem] leading-[1.5];
+  }
+
+  .food-list {
+    @apply relative flex flex-row flex-wrap md:py-10;
+  }
+  .food-item {
+    @apply flex w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-3rem)] m-2 md:m-4 lg:m-6;
+  }
+  .food-card {
+    @apply flex flex-col shadow-mat-1 rounded-t-lg;
+  }
+  .food-card__featured-image {
+    @apply flex flex-col w-full;
+  }
+
+  .food-card__bottom {
+    @apply p-4;
+  }
+  .food-card__description {
+    @apply text-xs leading-[1.5] font-light;
+  }
+  .food-card__location {
+    @apply flex flex-row gap-2 items-center;
+  }
+  .food-card__location-and-buy {
+    @apply flex flex-row justify-between items-center;
+  }
+
+  .section__content--services {
+    background-image: url('../assets/images/service_bg.png');
+    background-position: left center;
+    background-size: 50% auto;
+    background-repeat: no-repeat;
+    @apply relative flex flex-row flex-wrap w-full justify-end;
+  }
+  .service-card__top {
+    width: 48px;
+    height: 48px;
+    background-color: #f9edc3;
+    border-radius: 999vw;
+    background-position: center center;
+    background-origin: border-box;
+  }
+
+  .section__content--about-us {
+    background-image: url('../assets/images/about-us_bg.png');
+    background-position: right center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    @apply relative flex flex-row flex-wrap w-full justify-start;
   }
 }

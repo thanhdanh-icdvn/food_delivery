@@ -1,7 +1,36 @@
 import React from 'react';
 import Head from 'next/head';
+import img1 from '../assets/images/5.png';
+import img2 from '../assets/images/6.png';
+import img3 from '../assets/images/7.png';
+import FastFoodCard from '../components/card/FastFood';
+import Banner from '../components/banner/Banner';
+import FoodCard from '../components/card/Food';
 import Button from '../components/button/Button';
+import ServiceCard from '../components/card/Service';
 
+const serviceList: ServiceProps[] = [
+  {
+    iconName: 'priceTag',
+    title: 'Discount system',
+    description: 'We have favorable discount system for our regular customer',
+  },
+  {
+    iconName: 'delivery',
+    title: 'Delivery',
+    description: 'Fast and safe delivery from us with a reliable introduction',
+  },
+  {
+    iconName: 'tray',
+    title: '500+ Restaurant ',
+    description: 'We have more then 500 thousand restaurant who cooperate with us',
+  },
+  {
+    iconName: 'winner',
+    title: 'Best quality',
+    description: 'We provide the best service and high quality',
+  },
+];
 export default function Home() {
   return (
     <>
@@ -11,16 +40,95 @@ export default function Home() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <section className='banner'>
-        <div className='banner__content'>
-          <h1 className='banner__heading'>
-            Are you <span className='text-primary-300'>hungry ?</span>
-          </h1>
-          <p className='banner__description'>You can order here very easy and simple</p>
-          <div className='banner__order-button mt-[32px] md:mt-[56px]'>
-            <Button variant='primary' size='lg' className='!rounded-[0.825em]'>
-              Order now
-            </Button>
+      <Banner />
+      <section id='why-fast-food' className='why-fast-food'>
+        <div className='section__heading'>
+          <h2 className='section__title'>Why fast food ?</h2>
+        </div>
+        <ul className='fast-food-list'>
+          <li className='fast-food-item'>
+            <FastFoodCard
+              imgUrl={img1}
+              imgAlt='Fast food is easy'
+              title='Easy'
+              description='Only with your smartphone you can get a food'
+            />
+          </li>
+          <li className='fast-food-item'>
+            <FastFoodCard
+              imgUrl={img2}
+              imgAlt='Fast food is fast'
+              title='Fast'
+              description='We can deliver your food
+              very fast'
+            />
+          </li>
+          <li className='fast-food-item'>
+            <FastFoodCard
+              imgUrl={img3}
+              imgAlt='Fast food is saft'
+              title='Safe'
+              description='All food label halal and stay
+              healthy for you'
+            />
+          </li>
+        </ul>
+      </section>
+      <section id='food' className='food'>
+        <div className='section__heading'>
+          <h2 className='section__title'>Food</h2>
+          <div className='section__sub-title'>Top restaurant for dining out or in !</div>
+        </div>
+        <div className='section__content'>
+          <ul className='food-list'>
+            {Array.from(Array(3).keys()).map((food, index) => {
+              return (
+                <li key={index} className='food-item'>
+                  <FoodCard />
+                </li>
+              );
+            })}
+          </ul>
+          <div className='text-center'>
+            <Button className='food__food-more'>Food more</Button>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className='section__heading'>
+          <h2 className='section__title'>Services</h2>
+          <div className='section__sub-title'>Service from our services to you</div>
+        </div>
+        <div className='section__content section__content--services'>
+          <div className='service__right flex flex-col md:w-[calc(60%)]'>
+            <ul className='service-list flex flex-row flex-wrap'>
+              {serviceList?.map((service, index) => {
+                return (
+                  <li key={index} className='flex flex-col md:w-[calc(50%-2rem)] m-2 md:m-4'>
+                    <ServiceCard iconName={service.iconName} title={service.title} description={service.description} />
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className='section__heading'>
+          <h2 className='section__title'>About Us</h2>
+          <div className='section__sub-title'>Resume about our company</div>
+        </div>
+        <div className='section__content section__content--about-us'>
+          <div className='about-us__left'>
+            <ul className='service-list flex flex-row flex-wrap w-[calc(60%)]'>
+              {serviceList?.map((service, index) => {
+                return (
+                  <li key={index} className='flex flex-col md:w-[calc(50%-2rem)] m-2 md:m-4'>
+                    <ServiceCard iconName={service.iconName} title={service.title} description={service.description} />
+                  </li>
+                );
+              })}
+            </ul>
           </div>
         </div>
       </section>

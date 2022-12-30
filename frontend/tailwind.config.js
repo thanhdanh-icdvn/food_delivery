@@ -40,6 +40,19 @@ const colorPalette = {
     900: '#884400', //main
     DEFAULT: '#884400',
   },
+  quaternary: {
+    50: '#fef8ee',
+    100: '#fdefd7',
+    200: '#f9dcaf',
+    300: '#f5c27c',
+    400: '#f1a350', //main
+    500: '#ec8223',
+    600: '#de6918',
+    700: '#b85016',
+    800: '#92401a',
+    900: '#763618',
+    DEFAULT: '#f1a350',
+  },
   info: {
     50: '#eefcfd',
     100: '#d3f7fa',
