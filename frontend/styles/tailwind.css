@@ -5,7 +5,7 @@
 @layer components {
   /* Header and Footer */
   body {
-    @apply text-secondary leading-[1.5];
+    @apply text-secondary leading-[1.5] text-[1.25rem];
   }
   .header-main,
   .footer-main {
@@ -99,7 +99,7 @@
     position: relative;
     background-image: url('../assets/images/cake.png'), url('../assets/images/circle_02.png'),
       url('../assets//images/circle_03.png'), url('../assets/images/circle_01.png');
-    background-position: left, bottom center, top center, right;
+    background-position: left, bottom 5% left 40%, top 5% left 60%, right;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: contain, auto, auto, auto;
   }
@@ -129,6 +129,7 @@
     @apply text-[1.25rem] leading-[1.5];
   }
 
+  /* Food list */
   .food-list {
     @apply relative flex flex-row flex-wrap md:py-10;
   }
@@ -160,7 +161,7 @@
     background-position: left center;
     background-size: 50% auto;
     background-repeat: no-repeat;
-    @apply relative flex flex-row flex-wrap w-full justify-end;
+    @apply relative flex flex-row flex-wrap w-full justify-end py-28;
   }
   .service-card__top {
     width: 48px;
@@ -172,10 +173,61 @@
   }
 
   .section__content--about-us {
-    background-image: url('../assets/images/about-us_bg.png');
-    background-position: right center;
-    background-size: contain;
+    background-image: url('../assets/images/about-us-2_bg.png'), url('../assets/images/about-us_bg.png');
+    background-position: right top 60%, right 0 center;
+    background-size: auto, contain;
+    background-repeat: no-repeat, no-repeat;
+    @apply relative flex flex-row flex-wrap w-full justify-start py-28;
+  }
+  .about-us__left {
+    @apply flex flex-col text-[28px] w-[calc(66.67%-2rem)];
+  }
+
+  .section__content--contact-us {
+    @apply relative flex flex-row flex-wrap w-full justify-start py-28;
+  }
+  .contact-us__left {
+    @apply flex flex-col md:w-1/2 px-4;
+  }
+  .contact-us__left .contact-us__title {
+    @apply font-normal text-[80px];
+  }
+  .contact-us__left .contact-us__description {
+    @apply font-normal text-[35px];
+  }
+  .contact-us__right {
+    @apply flex flex-col md:w-1/2;
+  }
+  .contact-us__form {
+    @apply flex flex-row flex-wrap;
+  }
+
+  .input-field {
+    @apply relative border-b-2 focus-within:border-blue-500;
+  }
+  .input {
+    @apply block appearance-none focus:outline-none bg-transparent;
+  }
+
+  .footer {
+    background-image: url('../assets/images/footer_bg.png');
+    background-size: 100% 100%;
+    background-position: center center;
     background-repeat: no-repeat;
-    @apply relative flex flex-row flex-wrap w-full justify-start;
+  }
+  .footer__wrapper {
+    @apply flex flex-row flex-wrap justify-between pt-44;
+  }
+
+  .menu-item-group__title {
+    @apply font-medium text-[23px];
+  }
+
+  .footer__bottom {
+    @apply flex flex-row flex-wrap justify-between mt-[90px];
+  }
+
+  .footer__bottom .footer__sub-nav ul {
+    @apply flex flex-row flex-wrap gap-8;
   }
 }
