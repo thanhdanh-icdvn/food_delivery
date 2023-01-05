@@ -12,7 +12,7 @@ import foodImage from 'assets/images/steak.png';
 import foodImage2 from 'assets/images/pasta.png';
 import foodImage3 from 'assets/images/spagettie.png';
 import Slider, { Settings } from 'react-slick';
-import { Map } from 'react-map-gl';
+import { Map, GeolocateControl, FullscreenControl, NavigationControl, ScaleControl } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const serviceList: ServiceProps[] = [
@@ -250,7 +250,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section>
+      <section id='maps'>
         <Map
           initialViewState={{
             longitude: 106.7004238,
@@ -263,7 +263,12 @@ export default function Home() {
             width: '100%',
             height: '600px',
           }}
-        />
+        >
+          <GeolocateControl position='top-left' />
+          <FullscreenControl position='top-left' />
+          <NavigationControl position='top-left' />
+          <ScaleControl />
+        </Map>
       </section>
     </>
   );

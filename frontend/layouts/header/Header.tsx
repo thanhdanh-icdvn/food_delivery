@@ -40,7 +40,12 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
               </Link>
             </li>
             <li>
-              <Link href={''} className='relative inline-flex items-center'>
+              <Link href={'#maps'} scroll>
+                Bản đồ
+              </Link>
+            </li>
+            <li>
+              <Link href={''} className='relative inline-flex items-center' onClick={handleToggleDrawer}>
                 <IconComponent name='shoppingBag' width={25} height={25} className='text-secondary' />
                 <div className='absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-gray-100 bg-primary-400 border-2 border-white rounded-full -top-2 -right-3'>
                   20
@@ -50,11 +55,6 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
             <li>
               <Button variant='primary' type='button' size='sm' className='!shadow-2xl'>
                 Sign In
-              </Button>
-            </li>
-            <li>
-              <Button variant='primary' type='button' size='sm' onClick={handleToggleDrawer}>
-                Toggle
               </Button>
             </li>
           </ul>
