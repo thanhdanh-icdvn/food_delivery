@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../components/card/Card';
+import Card from '@/components/card/Card';
 
 const Profile = () => {
   return (
@@ -17,7 +17,7 @@ const Profile = () => {
         </div>
         <div className='profile__details'>
           <Card className='details details__about'>About</Card>
-          <Card className='details details__experient'>Experience</Card>
+          <Card className='details details__experience'>Experience</Card>
         </div>
       </div>
     </>

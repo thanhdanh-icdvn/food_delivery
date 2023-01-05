@@ -1,5 +1,12 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/pages/*": ["pages/*"],
+      "@/components/*": ["components/*"],
+      "@/layouts/*": ["layouts/*"],
+      "assets/*": ["assets/*"]
+    },
     "types": [],
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -16,6 +23,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "types"],
+  "include": ["next-env.d.ts", "pages/**/*", "src/**/*", "types"],
   "exclude": ["node_modules"]
 }

@@ -11,50 +11,50 @@ const Footer = ({ className }: FooterProps) => {
           <li>
             <div className='footer__logo'>
               <Image src={logo} alt='Logo' width={48} />
-              <p>Anywhere, anytime, enjoy your shopping time </p>
+              <p className='font-light'>Bất cứ nơi nào, bất cứ lúc nào, tận hưởng thời gian mua sắm của bạn </p>
             </div>
           </li>
           <li className='menu-item-group'>
             <div className='footer__information'>
-              <h3 className='menu-item-group__title'>Infomation</h3>
+              <h3 className='menu-item-group__title'>Thông tin</h3>
               <ul>
                 <li className='menu-item'>
-                  <Link href={'#'}>About us</Link>
+                  <Link href={'#'}>Về chúng tôi</Link>
                 </li>
                 <li className='menu-item'>
-                  <Link href={'#'}>Event</Link>
+                  <Link href={'#'}>Sự kiện</Link>
                 </li>
                 <li className='menu-item'>
-                  <Link href={'#'}>More search</Link>
+                  <Link href={'#'}>Tìm kiếm nhiều hơn</Link>
                 </li>
               </ul>
             </div>
           </li>
           <li className='menu-item-group'>
             <div className='footer__helpful-links'>
-              <h3 className='menu-item-group__title'>Helpful Links</h3>
+              <h3 className='menu-item-group__title'>Liên kết hữu ích</h3>
               <ul>
                 <li className='menu-item'>
-                  <Link href={'#'}>Services</Link>
+                  <Link href={'#'}>Dịch vụ</Link>
                 </li>
                 <li className='menu-item'>
-                  <Link href={'#'}>Support</Link>
+                  <Link href={'#'}>Hỗ trợ</Link>
                 </li>
                 <li className='menu-item'>
-                  <Link href={'#'}>Term & Condition</Link>
+                  <Link href={'#'}>Điều khoản và điều kiện</Link>
                 </li>
                 <li className='menu-item'>
-                  <Link href={'#'}>Privacy</Link>
+                  <Link href={'#'}>Thỏa thuận bảo mật</Link>
                 </li>
               </ul>
             </div>
           </li>
           <li className='menu-item-group'>
             <div className='footer__our-menu'>
-              <h3 className='menu-item-group__title'>Our Menu</h3>
+              <h3 className='menu-item-group__title'>Liên kết của chúng tôi</h3>
               <ul className='menu-item-list'>
                 <li className='menu-item'>
-                  <Link href={'#'}>Driver</Link>
+                  <Link href={'#'}>Tài xế</Link>
                 </li>
                 <li className='menu-item'>
                   <Link href={'#'}>Catalog</Link>
@@ -71,19 +71,20 @@ const Footer = ({ className }: FooterProps) => {
           <div className='footer__sub-nav'>
             <ul>
               <li>
-                <Link href={''}>FAQ</Link>
+                <Link href={''}>Hỏi đáp</Link>
               </li>
               <li>
-                <Link href={''}>Contact Us</Link>
+                <Link href={''}>Liên hệ</Link>
               </li>
               <li>
-                <Link href={''}>Legal</Link>
+                <Link href={''}>Điều khoản</Link>
               </li>
             </ul>
           </div>
           <div className='footer__reserved'>
             <p>
-              <span> &#169;</span> All Right Reserved Fast Food Creative 2023
+              <span> &#169;</span> FF Creative đã đăng ký bản quyền{' '}
+              <span className='year'>{new Date().getFullYear()}</span>
             </p>
           </div>
         </div>

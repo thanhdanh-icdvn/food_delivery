@@ -2,11 +2,13 @@ import React from 'react';
 import type { AppProps } from 'next/app';
 import { CacheProvider } from '@emotion/react';
 import { cache } from '@emotion/css';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import '../styles/globals.css';
 import GlobalStyles from '../styles/GlobalStyles';
-import MainLayout from '../layouts/Main';
-import MainLayoutWithSidebar from '../layouts/MainWithSideBar';
-import MainNoHeaderNoFooter from '../layouts/MainNoHeaderNoFooter';
+import MainLayout from '@/layouts/Main';
+import MainLayoutWithSidebar from '@/layouts/MainWithSideBar';
+import MainNoHeaderNoFooter from '@/layouts/MainNoHeaderNoFooter';
 
 export const layouts = {
   Main: MainLayout,

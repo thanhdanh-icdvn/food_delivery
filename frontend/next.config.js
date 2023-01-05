@@ -24,6 +24,9 @@ const nextConfig = {
     };
     return config;
   },
+  env: {
+    NEXT_MAP_BOX_ACCESSTOKEN: process.env.NEXT_MAP_BOX_ACCESSTOKEN,
+  },
   reactStrictMode: true,
 };
 

@@ -1,37 +1,40 @@
 import React from 'react';
 import Head from 'next/head';
-import img1 from '../assets/images/5.png';
-import img2 from '../assets/images/6.png';
-import img3 from '../assets/images/7.png';
-import FastFoodCard from '../components/card/FastFood';
-import Banner from '../components/banner/Banner';
-import FoodCard from '../components/card/Food';
-import Button from '../components/button/Button';
-import ServiceCard from '../components/card/Service';
-import foodImage from '../assets/images/steak.png';
-import foodImage2 from '../assets/images/pasta.png';
-import foodImage3 from '../assets/images/spagettie.png';
+import img1 from 'assets/images/5.png';
+import img2 from 'assets/images/6.png';
+import img3 from 'assets/images/7.png';
+import FastFoodCard from '@/components/card/FastFood';
+import Banner from '@/components/banner/Banner';
+import FoodCard from '@/components/card/Food';
+import Button from '@/components/button/Button';
+import ServiceCard from '@/components/card/Service';
+import foodImage from 'assets/images/steak.png';
+import foodImage2 from 'assets/images/pasta.png';
+import foodImage3 from 'assets/images/spagettie.png';
+import Slider, { Settings } from 'react-slick';
+import { Map } from 'react-map-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
 
 const serviceList: ServiceProps[] = [
   {
     iconName: 'priceTag',
-    title: 'Discount system',
-    description: 'We have favorable discount system for our regular customer',
+    title: 'Hệ thống chiết khấu',
+    description: 'Chúng tôi có hệ thống giảm giá thuận lợi cho khách hàng thường xuyên của chúng tôi',
   },
   {
     iconName: 'delivery',
-    title: 'Delivery',
-    description: 'Fast and safe delivery from us with a reliable introduction',
+    title: 'Vận chuyển',
+    description: 'Giao hàng nhanh chóng và an toàn từ chúng tôi với lời giới thiệu đáng tin cậy',
   },
   {
     iconName: 'tray',
-    title: '500+ Restaurant ',
-    description: 'We have more then 500 thousand restaurant who cooperate with us',
+    title: '500+ Nhà hàng ',
+    description: 'Chúng tôi có hơn 500 nghìn nhà hàng hợp tác với chúng tôi',
   },
   {
     iconName: 'winner',
-    title: 'Best quality',
-    description: 'We provide the best service and high quality',
+    title: 'Chất lượng tốt nhất',
+    description: 'Chúng tôi cung cấp dịch vụ tốt nhất và chất lượng cao',
   },
 ];
 
@@ -57,7 +60,65 @@ const foodList: FoodProps[] = [
     description: 'Mô tả',
     place: 'Hồ Chí Minh',
   },
+  {
+    id: 4,
+    title: 'Steak',
+    featuredImageUrl: foodImage,
+    description: 'Mô tả',
+    place: 'Hồ Chí Minh',
+  },
+  {
+    id: 5,
+    title: 'Steak',
+    featuredImageUrl: foodImage2,
+    description: 'Mô tả',
+    place: 'Hồ Chí Minh',
+  },
+  {
+    id: 6,
+    title: 'Steak',
+    featuredImageUrl: foodImage3,
+    description: 'Mô tả',
+    place: 'Hồ Chí Minh',
+  },
 ];
+
+const settings: Settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 5000,
+  cssEase: 'linear',
+  swipeToSlide: true,
+  touchMove: true,
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
 export default function Home() {
   return (
     <>
@@ -68,63 +129,57 @@ export default function Home() {
         <link rel='icon' href='/favicon.ico' />
       </Head>
       <Banner />
-      <section id='why-fast-food' className='why-fast-food'>
+      <section id='why-fast-food' className='section why-fast-food'>
         <div className='section__heading'>
-          <h2 className='section__title'>Why fast food ?</h2>
+          <h2 className='section__title'>Tại sao phải là FF ?</h2>
         </div>
         <ul className='fast-food-list'>
           <li className='fast-food-item'>
             <FastFoodCard
               imgUrl={img1}
-              imgAlt='Fast food is easy'
-              title='Easy'
-              description='Only with your smartphone you can get a food'
+              imgAlt='FF là dễ dàng'
+              title='Dễ dàng'
+              description='Chỉ với điện thoại thông minh của bạn, bạn đã có thể nhận được thực phẩm'
             />
           </li>
           <li className='fast-food-item'>
             <FastFoodCard
               imgUrl={img2}
-              imgAlt='Fast food is fast'
-              title='Fast'
-              description='We can deliver your food
-              very fast'
+              imgAlt='FF là Nhanh'
+              title='Nhanh'
+              description='Chúng tôi có thể vận chuyển thực phẩm đến bạn một cách nhanh chóng'
             />
           </li>
           <li className='fast-food-item'>
             <FastFoodCard
               imgUrl={img3}
-              imgAlt='Fast food is saft'
-              title='Safe'
-              description='All food label halal and stay
-              healthy for you'
+              imgAlt='FF là An toàn'
+              title='An toàn'
+              description='Tất cả thực phẩm luôn an toàn cho bạn'
             />
           </li>
         </ul>
       </section>
-      <section id='food' className='food'>
+      <section id='food' className='section food'>
         <div className='section__heading'>
-          <h2 className='section__title'>Food</h2>
-          <div className='section__sub-title'>Top restaurant for dining out or in !</div>
+          <h2 className='section__title'>Thực phẩm</h2>
+          <div className='section__sub-title'>Nhà hàng hàng đầu để ăn ngoài trời hoặc ăn trong nhà!</div>
         </div>
         <div className='section__content'>
-          <ul className='food-list'>
-            {Array.from(foodList).map(food => {
-              return (
-                <li key={food.id} className='food-item'>
-                  <FoodCard {...food} />
-                </li>
-              );
+          <Slider {...settings} className='flex flex-col z-[1] py-20'>
+            {foodList.map(food => {
+              return <FoodCard {...food} key={food.id} />;
             })}
-          </ul>
+          </Slider>
           <div className='text-center'>
-            <Button className='food__food-more'>Food more</Button>
+            <Button className='food__food-more shadow-lg shadow-primary/50'>Nhiều món hơn</Button>
           </div>
         </div>
       </section>
-      <section>
+      <section id='services' className='section'>
         <div className='section__heading'>
-          <h2 className='section__title'>Services</h2>
-          <div className='section__sub-title'>Service from our services to you</div>
+          <h2 className='section__title'>Dịch vụ</h2>
+          <div className='section__sub-title'>Phục vụ dịch vụ của chúng tôi đến bạn</div>
         </div>
         <div className='section__content section__content--services'>
           <div className='service__right flex flex-col w-full md:w-[calc(60%)]'>
@@ -140,59 +195,75 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section id='about-us' className='section'>
         <div className='section__heading'>
-          <h2 className='section__title'>About Us</h2>
-          <div className='section__sub-title'>Resume about our company</div>
+          <h2 className='section__title'>Về chúng tôi</h2>
+          <div className='section__sub-title'>Sơ yếu lý lịch về công ty chúng tôi</div>
         </div>
         <div className='section__content section__content--about-us'>
           <div className='about-us__left'>
             <p>
-              We are company engaged in the field food services with a very wide range throughout indonesia. we work
-              closely with more than 500+ restaurant in indonesia
+              Chúng tôi là công ty hoạt động trong lĩnh vực dịch vụ thực phẩm với phạm vi rất rộng khắp Việt Nam. chúng
+              tôi hợp tác chặt chẽ với hơn 500 nhà hàng tại Việt Nam
             </p>
             <div className='mt-[50px]'>
-              <Button size='lg'>Read more</Button>
+              <Button className='shadow-lg shadow-primary/50'>Xem thêm</Button>
             </div>
           </div>
         </div>
       </section>
-      <section>
+      <section id='contact-us' className='section'>
         <div className='section__heading'>
-          <h2 className='section__title'>Contact Us</h2>
-          <div className='section__sub-title'>If you need a help, we can ready here</div>
+          <h2 className='section__title'>Liên hệ với chúng tôi</h2>
+          <div className='section__sub-title'>Nếu bạn cần trợ giúp, chúng tôi có thể sẵn sàng tại đây</div>
         </div>
         <div className='section__content section__content--contact-us'>
           <div className='contact-us__left'>
-            <p className='contact-us__title'>Let&apos;s talk</p>
-            <p className='contact-us__description'>Ask us anything or just say hi..</p>
+            <p className='contact-us__title'>Cùng trò chuyện</p>
+            <p className='contact-us__description'>Hỏi chúng tôi bất cứ điều gì hoặc chỉ cần nói xin chào..</p>
           </div>
           <div className='contact-us__right'>
             <form id='contact-us__form' className='contact-us__form'>
               <div className='input-field w-full md:w-[calc(50%-2rem)] m-4 mb-[80px]'>
                 <label htmlFor='name' className='uppercase'>
-                  Name
+                  Tên
                 </label>
-                <input type='text' id='name' name='name' placeholder='Your name' className='input' />
+                <input type='text' id='name' name='name' placeholder='Tên của bạn' className='input' />
               </div>
               <div className='input-field w-full md:w-[calc(50%-2rem)] m-4 mb-[80px]'>
                 <label htmlFor='email' className='uppercase'>
-                  Email
+                  Thư điện tử
                 </label>
                 <input type='email' id='email' name='email' placeholder='example@yourdomain' className='input' />
               </div>
               <div className='input-field w-full md:w-[calc(100%-2rem)] m-4 mb-[80px]'>
                 <label htmlFor='message' className='uppercase'>
-                  Message
+                  Lời nhắn
                 </label>
-                <input type='text' id='message' name='message' placeholder='Hi there' className='input' />
+                <input type='text' id='message' name='message' placeholder='Xin chào...' className='input' />
               </div>
               <div className='px-4'>
-                <Button size='lg'>Send</Button>
+                <Button className='shadow-lg shadow-primary/50'>Gửi đi</Button>
               </div>
             </form>
           </div>
         </div>
+      </section>
+
+      <section>
+        <Map
+          initialViewState={{
+            longitude: 106.7004238,
+            latitude: 10.7756587,
+            zoom: 10,
+          }}
+          mapStyle='mapbox://styles/mapbox/streets-v11'
+          mapboxAccessToken={process.env.NEXT_MAP_BOX_ACCESSTOKEN ?? ''}
+          style={{
+            width: '100%',
+            height: '600px',
+          }}
+        />
       </section>
     </>
   );

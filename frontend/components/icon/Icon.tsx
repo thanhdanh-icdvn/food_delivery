@@ -1,22 +1,24 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { SVGProps } from 'react';
-import Arrow from '../../assets/icon/arrow.svg';
-import Delivery from '../../assets/icon/delivery.svg';
-import ExclamationCircle from '../../assets/icon/exclamation-circle.svg';
-import ExclamationTriangle from '../../assets/icon/exclamation-triangle.svg';
-import Heart from '../../assets/icon/heart.svg';
-import Identification from '../../assets/icon/identification.svg';
-import Language from '../../assets/icon/language.svg';
-import Maps from '../../assets/icon/maps.svg';
-import Plus from '../../assets/icon/plus.svg';
-import PriceTag from '../../assets/icon/price-tag.svg';
-import Setting from '../../assets/icon/setting.svg';
-import ShieldExclamation from '../../assets/icon/shield-exclamation.svg';
-import ShoppingBag from '../../assets/icon/shopping-bag.svg';
-import ShoppingCart from '../../assets/icon/shopping-cart.svg';
-import Tray from '../../assets/icon/tray.svg';
-import UserCircle from '../../assets/icon/user-circle.svg';
-import Winner from '../../assets/icon/winner.svg';
+import Arrow from 'assets/icon/arrow.svg';
+import Delivery from 'assets/icon/delivery.svg';
+import ExclamationCircle from 'assets/icon/exclamation-circle.svg';
+import ExclamationTriangle from 'assets/icon/exclamation-triangle.svg';
+import Heart from 'assets/icon/heart.svg';
+import Identification from 'assets/icon/identification.svg';
+import Language from 'assets/icon/language.svg';
+import Maps from 'assets/icon/maps.svg';
+import Plus from 'assets/icon/plus.svg';
+import PriceTag from 'assets/icon/price-tag.svg';
+import Setting from 'assets/icon/setting.svg';
+import ShieldExclamation from 'assets/icon/shield-exclamation.svg';
+import ShoppingBag from 'assets/icon/shopping-bag.svg';
+import ShoppingCart from 'assets/icon/shopping-cart.svg';
+import Tray from 'assets/icon/tray.svg';
+import UserCircle from 'assets/icon/user-circle.svg';
+import Winner from 'assets/icon/winner.svg';
+import ChevronLeft from 'assets/icon/chevron-left.svg';
+import ChevronRight from 'assets/icon/chevron-right.svg';
 
 type IconProps = SVGProps<SVGSVGElement> & {
   name: string;
@@ -39,6 +41,8 @@ const IconTypes: any = {
   tray: Tray,
   userCirlce: UserCircle,
   winner: Winner,
+  chevronLeft: ChevronLeft,
+  chevronRight: ChevronRight,
 };
 const IconComponent = ({ name, ...otherProps }: IconProps) => {
   const Icon = IconTypes[name];

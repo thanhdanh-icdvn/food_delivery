@@ -1,9 +1,9 @@
+import React from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
-import Button from '../components/button/Button';
 import { layouts } from './_app';
+import Button from '@/components/button/Button';
 
 const Login = (): PageProps => {
   return (
