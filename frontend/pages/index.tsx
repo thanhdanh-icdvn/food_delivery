@@ -172,7 +172,9 @@ export default function Home() {
             })}
           </Slider>
           <div className='text-center'>
-            <Button className='food__food-more shadow-lg shadow-primary/50'>Nhiều món hơn</Button>
+            <Button className='food__food-more shadow-lg shadow-primary/50' variant='primary'>
+              Nhiều món hơn
+            </Button>
           </div>
         </div>
       </section>
@@ -207,7 +209,9 @@ export default function Home() {
               tôi hợp tác chặt chẽ với hơn 500 nhà hàng tại Việt Nam
             </p>
             <div className='mt-[50px]'>
-              <Button className='shadow-lg shadow-primary/50'>Xem thêm</Button>
+              <Button className='shadow-lg shadow-primary/50' variant='primary'>
+                Xem thêm
+              </Button>
             </div>
           </div>
         </div>
@@ -243,7 +247,9 @@ export default function Home() {
                 <input type='text' id='message' name='message' placeholder='Xin chào...' className='input' />
               </div>
               <div className='px-4'>
-                <Button className='shadow-lg shadow-primary/50'>Gửi đi</Button>
+                <Button className='shadow-lg shadow-primary/50' variant='primary'>
+                  Gửi đi
+                </Button>
               </div>
             </form>
           </div>

@@ -2,7 +2,7 @@ import tw, { styled } from 'twin.macro';
 
 const Button = styled.button<ButtonProps>(
   ({
-    variant = 'primary',
+    variant = 'default',
     size = 'base',
     outlined = false,
     disabled = false,
@@ -80,6 +80,12 @@ const Button = styled.button<ButtonProps>(
     outlined == false &&
       variant === 'primary' &&
       tw`bg-primary text-white hover:text-white border border-primary hover:bg-primary-400 focus:ring-4 focus:outline-none focus:ring-primary-200`,
+    outlined == false &&
+      variant === 'default' &&
+      tw`bg-white text-gray-800 hover:text-gray-800 border border-transparent hover:bg-white focus:ring-4 focus:outline-none focus:ring-gray-200`,
+    outlined == true &&
+      variant === 'default' &&
+      tw`text-gray-800 hover:text-white border-2  border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300`,
   ]
 );
 export default Button;

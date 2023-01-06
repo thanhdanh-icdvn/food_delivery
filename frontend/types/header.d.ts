@@ -1,4 +1,4 @@
 type HeaderProps = {
   className?: string;
-  handleToggleDrawer?: () => void;
+  handleToggleDrawer: () => void;
 };

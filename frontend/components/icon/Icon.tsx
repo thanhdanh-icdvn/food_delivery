@@ -19,9 +19,12 @@ import UserCircle from 'assets/icon/user-circle.svg';
 import Winner from 'assets/icon/winner.svg';
 import ChevronLeft from 'assets/icon/chevron-left.svg';
 import ChevronRight from 'assets/icon/chevron-right.svg';
+import Trash from 'assets/icon/trash.svg';
 
 type IconProps = SVGProps<SVGSVGElement> & {
   name: string;
+  width?: number;
+  height?: number;
 };
 const IconTypes: any = {
   arrow: Arrow,
@@ -43,11 +46,12 @@ const IconTypes: any = {
   winner: Winner,
   chevronLeft: ChevronLeft,
   chevronRight: ChevronRight,
+  trash: Trash,
 };
-const IconComponent = ({ name, ...otherProps }: IconProps) => {
+const IconComponent = ({ name, width = 24, height = 24, ...otherProps }: IconProps) => {
   const Icon = IconTypes[name];
   if (Icon) {
-    return <Icon {...otherProps} />;
+    return <Icon width={width} height={height} {...otherProps} />;
   }
   return null;
 };

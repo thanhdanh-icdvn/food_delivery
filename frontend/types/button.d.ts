@@ -8,7 +8,8 @@ type ButtonVariantProps =
   | 'danger'
   | 'pending'
   | 'dark'
-  | 'success';
+  | 'success'
+  | 'default';
 type ButtonProps = {
   disabled?: boolean;
   variant?: ButtonVariantProps;

@@ -1,17 +1,17 @@
 import Image from 'next/image';
 import React from 'react';
-import Button from '../../components/button/Button';
-import logo from '../../assets/images/logo.png';
+import Button from '@/components/button/Button';
+import logo from 'assets/images/logo.png';
 import Link from 'next/link';
-import IconComponent from 'components/icon/Icon';
+import IconComponent from '@/components/icon/Icon';
 
 const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
   return (
     <header className={`${className ?? ''}`}>
-      <div className='container flex flex-center justify-between mx-auto'>
-        <div className='header--left'>
+      <div className='header-wrapper'>
+        <Link className='header--left' href={'/'}>
           <Image src={logo} alt='Logo' width={48} height={48} />
-        </div>
+        </Link>
         <div className='header--right'>
           <ul className='inline-flex flex-row flex-wrap justify-end items-center gap-4'>
             <li>
@@ -45,7 +45,14 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
               </Link>
             </li>
             <li>
-              <Link href={''} className='relative inline-flex items-center' onClick={handleToggleDrawer}>
+              <Link
+                href={''}
+                className='relative inline-flex items-center'
+                onClick={e => {
+                  e.preventDefault();
+                  handleToggleDrawer();
+                }}
+              >
                 <IconComponent name='shoppingBag' width={25} height={25} className='text-secondary' />
                 <div className='absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-gray-100 bg-primary-400 border-2 border-white rounded-full -top-2 -right-3'>
                   20

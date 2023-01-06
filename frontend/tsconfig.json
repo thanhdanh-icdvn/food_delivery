@@ -5,6 +5,8 @@
       "@/pages/*": ["pages/*"],
       "@/components/*": ["components/*"],
       "@/layouts/*": ["layouts/*"],
+      "@/redux/*": ["redux/*"],
+      "@/styles/*": ["styles/*"],
       "assets/*": ["assets/*"]
     },
     "types": [],
