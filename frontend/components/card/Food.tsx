@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { BuyButton } from 'components/button/BuyButton';
-import IconComponent from '../icon/Icon';
+import IconComponent from '@/components/icon/Icon';
 
 const FoodCard = ({ title, featuredImageUrl, description, place }: FoodProps) => {
   return (

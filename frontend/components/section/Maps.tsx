@@ -2,7 +2,7 @@ import React from 'react';
 import { FullscreenControl, GeolocateControl, Map, NavigationControl, ScaleControl } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
-const MapsComponent: React.FunctionComponent = () => {
+const Maps: React.FunctionComponent = () => {
   return (
     <section id='maps'>
       <Map
@@ -27,4 +27,4 @@ const MapsComponent: React.FunctionComponent = () => {
   );
 };
 
-export default MapsComponent;
+export default Maps;
