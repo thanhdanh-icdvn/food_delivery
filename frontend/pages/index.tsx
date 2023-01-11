@@ -13,24 +13,29 @@ import AboutUs from '@/components/section/AboutUs';
 import FoodList from '@/components/section/FoodList';
 import WhyFastFood from '@/components/section/WhyFastFood';
 import Maps from '@/components/section/Maps';
+import Services from '@/components/section/Services';
 
 const serviceList: ServiceProps[] = [
   {
+    id: 1,
     iconName: 'priceTag',
     title: 'Hệ thống chiết khấu',
     description: 'Chúng tôi có hệ thống giảm giá thuận lợi cho khách hàng thường xuyên của chúng tôi',
   },
   {
+    id: 2,
     iconName: 'delivery',
     title: 'Vận chuyển',
     description: 'Giao hàng nhanh chóng và an toàn từ chúng tôi với lời giới thiệu đáng tin cậy',
   },
   {
+    id: 3,
     iconName: 'tray',
     title: '500+ Nhà hàng ',
     description: 'Chúng tôi có hơn 500 nghìn nhà hàng hợp tác với chúng tôi',
   },
   {
+    id: 4,
     iconName: 'winner',
     title: 'Chất lượng tốt nhất',
     description: 'Chúng tôi cung cấp dịch vụ tốt nhất và chất lượng cao',
@@ -118,6 +123,7 @@ export default function Home() {
       <Banner />
       <WhyFastFood fastFoodList={fastFoodList} />
       <FoodList foodList={foodList} />
+      <Services serviceList={serviceList} />
       <AboutUs />
       <ContactUs />
       <Maps />
