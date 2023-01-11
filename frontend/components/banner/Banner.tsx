@@ -6,7 +6,7 @@ const Banner = () => {
     <section id='banner' className='banner'>
       <div className='banner__content'>
         <h1 className='banner__heading'>
-          Bạn có <span className='text-primary-300'>đói ?</span>
+          Bạn có <span className='text-primary'>đói ?</span>
         </h1>
         <p className='banner__description'>Bạn có thể đặt hàng tại đây rất dễ dàng và đơn giản</p>
         <div className='banner__order-button mt-[32px] md:mt-[56px]'>

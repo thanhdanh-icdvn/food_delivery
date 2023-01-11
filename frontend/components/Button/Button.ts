@@ -55,7 +55,7 @@ const Button = styled.button<ButtonProps>(
       tw`text-secondary-400 hover:text-white border-2 border-secondary-300 hover:bg-secondary-500 focus:ring-4 focus:outline-none focus:ring-secondary-300`,
     outlined == true &&
       variant === 'primary' &&
-      tw`text-primary hover:text-white border-2 border-primary hover:bg-primary-400 focus:ring-4 focus:outline-none focus:ring-primary-200`,
+      tw`text-primary hover:text-gray-800 border-2 border-primary hover:bg-primary-400 focus:ring-4 focus:outline-none focus:ring-primary-200`,
     outlined === false &&
       variant === 'dark' &&
       tw`bg-dark-800 text-white hover:text-white border border-dark-800 hover:bg-dark-900 focus:ring-4 focus:outline-none focus:ring-dark-300`,
@@ -79,7 +79,7 @@ const Button = styled.button<ButtonProps>(
       tw`bg-secondary-400 text-gray-900 hover:text-gray-900 border border-secondary-300 hover:bg-secondary-500 focus:ring-4 focus:outline-none focus:ring-secondary-300`,
     outlined == false &&
       variant === 'primary' &&
-      tw`bg-primary text-white hover:text-white border border-primary hover:bg-primary-400 focus:ring-4 focus:outline-none focus:ring-primary-200`,
+      tw`bg-primary text-gray-800 hover:text-gray-800 border border-primary hover:bg-primary-400 focus:ring-4 focus:outline-none focus:ring-primary-200`,
     outlined == false &&
       variant === 'default' &&
       tw`bg-white text-gray-800 hover:text-gray-800 border border-transparent hover:bg-white focus:ring-4 focus:outline-none focus:ring-gray-200`,
@@ -88,4 +88,5 @@ const Button = styled.button<ButtonProps>(
       tw`text-gray-800 hover:text-white border-2  border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300`,
   ]
 );
+
 export default Button;

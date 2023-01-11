@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Button from '@/components/button/Button';
-import logo from 'assets/images/logo.png';
+import logo from 'assets/images/logo.webp';
 import Link from 'next/link';
 import IconComponent from '@/components/icon/Icon';
 
@@ -54,7 +54,7 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
                 }}
               >
                 <IconComponent name='shoppingBag' width={25} height={25} className='text-secondary' />
-                <div className='absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-gray-100 bg-primary-400 border-2 border-white rounded-full -top-2 -right-3'>
+                <div className='absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-gray-800 bg-primary border-2 border-white rounded-full -top-2 -right-3'>
                   20
                 </div>
               </Link>

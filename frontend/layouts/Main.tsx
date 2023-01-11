@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { Roboto } from '@next/font/google';
 import Footer from './footer/Footer';
 import Header from './header/Header';
-import Drawer from '../components/drawer/Drawer';
+import Drawer from '@/components/drawer/Drawer';
+
 const roboto = Roboto({
   subsets: ['vietnamese', 'latin'],
   weight: ['100', '300', '400', '500', '700', '900'],

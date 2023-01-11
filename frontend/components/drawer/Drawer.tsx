@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import food from 'assets/images/steak.png';
+import food from 'assets/images/steak.webp';
 import Button from '@/components/button/Button';
 
 const Drawer: React.FC<DrawerProps> = ({ isShow, toggleShow }: DrawerProps) => {
@@ -8,18 +8,15 @@ const Drawer: React.FC<DrawerProps> = ({ isShow, toggleShow }: DrawerProps) => {
     <div
       className={`${
         isShow ? 'translate-x-0' : 'translate-x-full'
-      } fixed z-40 p-4 bg-white  shadow-mat-1 transition transform duration-300 ease-in-out w-96 right-0 flex flex-col justify-between h-full`}
+      } fixed z-40 p-4 bg-white  shadow-mat-1 transition transform duration-300 ease-in-out w-96 right-0 flex flex-col flex-shrink-0 justify-between h-full`}
       tabIndex={-1}
-      aria-labelledby='drawer-label'
     >
-      <div className='flex flex-col flex-wrap md:h-[80%]'>
+      <div className='flex flex-col md:h-[80%]'>
         <div id='drawer-label' className='inline-flex items-center mb-4 text-base font-semibold'>
           <div className='cart-drawer__title'>Your cart(5)</div>
         </div>
         <button
           type='button'
-          data-drawer-hide='drawer-example'
-          aria-controls='drawer-example'
           onClick={toggleShow}
           className='text-gray-400 bg-transparent rounded-lg text-sm p-1.5 absolute top-2.5 right-2.5 inline-flex items-center'
         >
@@ -38,8 +35,8 @@ const Drawer: React.FC<DrawerProps> = ({ isShow, toggleShow }: DrawerProps) => {
           </svg>
           <span className='sr-only'>Close menu</span>
         </button>
-        <p className='card-drawer__notification-message font-light text-sm p-4 mb-4 bg-primary-50 rounded-lg text-center'>
-          Your cart will exprire in <span className='text-primary-400 font-bold'>9.44</span> minutes!
+        <p className='card-drawer__notification-message text-sm p-4 mb-4 bg-primary-50 rounded-lg text-center shadow-sm'>
+          Your cart will exprire in <span className='text-red-600 font-bold'>9.44</span> minutes!
           <br />
           Checkout now before your items sell out!
         </p>
@@ -74,7 +71,7 @@ const Drawer: React.FC<DrawerProps> = ({ isShow, toggleShow }: DrawerProps) => {
           <div className='cart__sub-toal-label'>Subtotal</div>
           <div className='cart__sub-total-value'>$75.00</div>
         </div>
-        <Button>Button 1</Button>
+        <Button variant='primary'>Button 1</Button>
         <p className='text-center'>Or continue shopping</p>
       </div>
     </div>

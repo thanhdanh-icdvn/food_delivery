@@ -7,7 +7,7 @@ const FoodCard = ({ title, featuredImageUrl, description, place }: FoodProps) =>
   return (
     <div className='food-card'>
       <div className='food-card__top'>
-        <Image className='food-card__featured-image' alt='Sirloin steak' src={featuredImageUrl} />
+        <Image className='food-card__featured-image' alt='Sirloin steak' src={featuredImageUrl} priority />
       </div>
       <div className='food-card__bottom'>
         <div>{title}</div>
@@ -17,7 +17,9 @@ const FoodCard = ({ title, featuredImageUrl, description, place }: FoodProps) =>
             <IconComponent name='maps' width={12} height={12} />
             <span>{place}</span>
           </div>
-          <BuyButton className='food-card__buy-button'>Mua ngay</BuyButton>
+          <BuyButton className='food-card__buy-button' variant='primary'>
+            Mua ngay
+          </BuyButton>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-const FastFoodCard = ({ imgUrl, imgAlt = '', title, description }: FastFoodCardProps) => {
+const FastFoodCard = ({ imgUrl, imgAlt = '', title, description }: FastFoodProps) => {
   return (
     <div className='fast-food-card'>
       <div className='fast-food-card__top'>

@@ -23,8 +23,8 @@ import Trash from 'assets/icon/trash.svg';
 
 type IconProps = SVGProps<SVGSVGElement> & {
   name: string;
-  width?: number;
-  height?: number;
+  width?: number | string;
+  height?: number | string;
 };
 const IconTypes: any = {
   arrow: Arrow,
@@ -48,7 +48,7 @@ const IconTypes: any = {
   chevronRight: ChevronRight,
   trash: Trash,
 };
-const IconComponent = ({ name, width = 24, height = 24, ...otherProps }: IconProps) => {
+const IconComponent = ({ name, width = '1em', height = '1em', ...otherProps }: IconProps) => {
   const Icon = IconTypes[name];
   if (Icon) {
     return <Icon width={width} height={height} {...otherProps} />;

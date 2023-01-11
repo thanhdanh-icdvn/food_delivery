@@ -63,10 +63,10 @@
 
   /* Index page */
   .banner {
-    background-image: url('../assets/images/1.png');
+    background-image: url('../assets/images/1.webp');
     background-position: right center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 50% auto;
     background-origin: inherit;
     padding: 276px 0;
     @apply flex flex-row;
@@ -102,8 +102,8 @@
   /* Why fast food */
   .why-fast-food {
     position: relative;
-    background-image: url('../assets/images/cake.png'), url('../assets/images/circle_02.png'),
-      url('../assets//images/circle_03.png'), url('../assets/images/circle_01.png');
+    background-image: url('../assets/images/cake.webp'), url('../assets/images/circle_02.webp'),
+      url('../assets//images/circle_03.webp'), url('../assets/images/circle_01.webp');
     background-position: left, bottom 5% left 40%, top 5% left 60%, right;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: contain, auto, auto, auto;
@@ -162,7 +162,7 @@
   }
 
   .section__content--services {
-    background-image: url('../assets/images/service_bg.png');
+    background-image: url('../assets/images/service_bg.webp');
     background-position: left center;
     background-size: 50% auto;
     background-repeat: no-repeat;
@@ -178,7 +178,7 @@
   }
 
   .section__content--about-us {
-    background-image: url('../assets/images/about-us-2_bg.png'), url('../assets/images/about-us_bg.png');
+    background-image: url('../assets/images/about-us-2_bg.webp'), url('../assets/images/about-us_bg.webp');
     background-position: right top 60%, right 0 center;
     background-size: auto, contain;
     background-repeat: no-repeat, no-repeat;
@@ -215,7 +215,7 @@
   }
 
   .footer-main {
-    background-image: url('../assets/images/footer_bg.png');
+    background-image: url('../assets/images/footer_bg.webp');
     background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;

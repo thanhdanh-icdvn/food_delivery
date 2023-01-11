@@ -1,5 +1,5 @@
 import { Poppins } from '@next/font/google';
-import React from 'react';
+import React, { useState } from 'react';
 import Footer from './footer/Footer';
 import Header from './header/Header';
 import SideBar from './sidebar/Sidebar';
@@ -7,9 +7,14 @@ import SideBar from './sidebar/Sidebar';
 const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 
 const MainLayoutWithSidebar = ({ children }: LayoutProps): React.ReactNode => {
+  const [isShow, setIsShow] = useState<boolean>(false);
+
+  const handleToggleShow = () => {
+    setIsShow(prev => !prev);
+  };
   return (
     <>
-      <Header className={`header-main sticky top-0 ${poppins.className}`} />
+      <Header className={`header-main sticky top-0 ${poppins.className}`} handleToggleDrawer={handleToggleShow} />
       <main className='main'>
         <div className='main__inner'>
           <SideBar className='sidebar' />
