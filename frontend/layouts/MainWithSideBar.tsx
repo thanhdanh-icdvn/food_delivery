@@ -1,15 +1,10 @@
-import { Roboto } from '@next/font/google';
 import React, { useState } from 'react';
 import Drawer from './drawer/Drawer';
 import Footer from './footer/Footer';
 import Header from './header/Header';
+import { robotoLocal } from './Main';
 import SideBar from './sidebar/Sidebar';
 
-const roboto = Roboto({
-  subsets: ['vietnamese', 'latin', 'latin-ext'],
-  weight: ['100', '300', '400', '500', '700', '900'],
-  fallback: ['sans-serif'],
-});
 const MainLayoutWithSidebar = ({ children }: LayoutProps): React.ReactNode => {
   const [isShow, setIsShow] = useState<boolean>(false);
 
@@ -18,7 +13,10 @@ const MainLayoutWithSidebar = ({ children }: LayoutProps): React.ReactNode => {
   };
   return (
     <>
-      <Header className={`header-main sticky top-0 ${roboto.className}`} handleToggleDrawer={handleToggleShow} />
+      <Header
+        className={`header-main sticky top-0 ${robotoLocal.className ?? ''}`}
+        handleToggleDrawer={handleToggleShow}
+      />
       <main className='main'>
         <div className='main__inner'>
           <SideBar className='sidebar' />
@@ -26,7 +24,7 @@ const MainLayoutWithSidebar = ({ children }: LayoutProps): React.ReactNode => {
         </div>
         <Drawer isShow={isShow} toggleShow={handleToggleShow} />
       </main>
-      <Footer className={`footer-main ${roboto.className}`} />
+      <Footer className={`footer-main ${robotoLocal.className ?? ''}`} />
     </>
   );
 };
