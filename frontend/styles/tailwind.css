@@ -66,9 +66,8 @@
     background-image: url('../assets/images/1.webp');
     background-position: right center;
     background-repeat: no-repeat;
-    background-size: 50% auto;
+    background-size: contain;
     background-origin: inherit;
-    padding: 276px 0;
     @apply flex flex-row;
   }
   .banner > .banner__content {
@@ -88,7 +87,7 @@
   /* Common section class */
 
   .section {
-    @apply py-[3.25rem];
+    @apply py-[1.5rem];
   }
   .section__heading {
     @apply m-0;
@@ -102,14 +101,14 @@
   /* Why fast food */
   .why-fast-food {
     position: relative;
-    background-image: url('../assets/images/cake.webp'), url('../assets/images/circle_02.webp'),
-      url('../assets//images/circle_03.webp'), url('../assets/images/circle_01.webp');
-    background-position: left, bottom 5% left 40%, top 5% left 60%, right;
-    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
-    background-size: contain, auto, auto, auto;
   }
   .fast-food-list {
-    @apply relative flex flex-row flex-wrap md:py-10;
+    background-image: url('../assets/images/cake.webp'), url('../assets/images/circle_02.webp'),
+      url('../assets//images/circle_03.webp'), url('../assets/images/circle_01.webp');
+    background-position: left, bottom 5% left 40%, top 5% left 60%, right center;
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-size: contain, auto, auto, auto;
+    @apply relative flex flex-row flex-wrap;
   }
 
   .fast-food-item {
@@ -122,7 +121,7 @@
     @apply overflow-auto;
   }
   .fast-food-card > .fast-food-card__top > .fast-food-card__featured-image {
-    @apply object-cover aspect-square max-w-[300px];
+    @apply object-cover aspect-square;
   }
   .fast-food-card > .fast-food-card__bottom {
     @apply mt-[-10%] pb-[10%] flex flex-col items-center justify-center text-center px-14 text-tertiary;
@@ -166,7 +165,7 @@
     background-position: left center;
     background-size: 50% auto;
     background-repeat: no-repeat;
-    @apply relative flex flex-row flex-wrap w-full justify-end py-28;
+    @apply relative flex flex-row flex-wrap w-full justify-end py-14;
   }
   .service-card__top {
     width: 48px;
@@ -182,23 +181,23 @@
     background-position: right top 60%, right 0 center;
     background-size: auto, contain;
     background-repeat: no-repeat, no-repeat;
-    @apply relative flex flex-row flex-wrap w-full justify-start py-28;
+    @apply relative flex flex-row flex-wrap w-full justify-start py-14;
   }
   .about-us__left {
     @apply flex flex-col text-[1.4rem] w-[calc(66.67%-2rem)];
   }
 
   .section__content--contact-us {
-    @apply relative flex flex-row flex-wrap w-full justify-start py-28;
+    @apply relative flex flex-row flex-wrap w-full justify-start py-14;
   }
   .contact-us__left {
     @apply flex flex-col md:w-1/2 px-4;
   }
   .contact-us__left .contact-us__title {
-    @apply font-normal text-[4rem];
+    @apply font-normal text-[2.5rem] md:text-[4rem];
   }
   .contact-us__left .contact-us__description {
-    @apply font-normal text-[1.75rem];
+    @apply font-normal text-[1.25rem] md:text-[2rem];
   }
   .contact-us__right {
     @apply flex flex-col md:w-1/2;
@@ -208,17 +207,27 @@
   }
 
   .input-field {
-    @apply relative border-b-2 focus-within:border-blue-500;
+    @apply relative border-b-2 focus-within:border-blue-500 md:w-[calc(100%-2rem)] m-4 md:mb-[32px];
   }
   .input {
     @apply block appearance-none focus:outline-none bg-transparent;
   }
 
   .footer-main {
+    @apply relative lg:pt-24;
+  }
+
+  .footer-main::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
     background-image: url('../assets/images/footer_bg.webp');
-    background-size: 100% 100%;
-    background-position: center center;
     background-repeat: no-repeat;
+    z-index: -1;
+    background-size: cover;
+    background-position: top;
   }
   .footer-main__wrapper {
     @apply flex flex-row flex-wrap justify-between pt-44 px-4;

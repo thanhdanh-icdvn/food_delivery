@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { Roboto } from '@next/font/google';
-import Footer from './footer/Footer';
-import Header from './header/Header';
-import Drawer from '@/components/drawer/Drawer';
+import Header from '@/layouts/header/Header';
+import Drawer from '@/layouts/drawer/Drawer';
+import Footer from '@/layouts/footer/Footer';
 
 const roboto = Roboto({
-  subsets: ['vietnamese', 'latin'],
+  subsets: ['vietnamese', 'latin', 'latin-ext'],
   weight: ['100', '300', '400', '500', '700', '900'],
   fallback: ['sans-serif'],
 });
+
 const MainLayout = ({ children }: LayoutProps): React.ReactNode => {
   const [isShow, setIsShow] = useState<boolean>(false);
 

@@ -10,7 +10,7 @@ const Footer = ({ className }: FooterProps) => {
         <ul className='footer-main__wrapper'>
           <li>
             <div className='footer-main__logo'>
-              <Image src={logo} alt='Logo' width={48} />
+              {logo && <Image src={logo} alt='Logo' width={48} />}
               <p className='font-light'>Bất cứ nơi nào, bất cứ lúc nào, tận hưởng thời gian mua sắm của bạn </p>
             </div>
           </li>
@@ -82,10 +82,10 @@ const Footer = ({ className }: FooterProps) => {
             </ul>
           </div>
           <div className='footer-main__reserved'>
-            <p>
+            <div>
               <span> &#169;</span> FF Creative đã đăng ký bản quyền{' '}
               <span className='year'>{new Date().getFullYear()}</span>
-            </p>
+            </div>
           </div>
         </div>
       </div>

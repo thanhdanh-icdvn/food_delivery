@@ -15,19 +15,19 @@ const ContactUs = () => {
         </div>
         <div className='contact-us__right'>
           <form id='contact-us__form' className='contact-us__form'>
-            <div className='input-field w-full md:w-[calc(50%-2rem)] m-4 mb-[80px]'>
+            <div className='input-field w-full'>
               <label htmlFor='name' className='uppercase'>
                 Tên
               </label>
               <input type='text' id='name' name='name' placeholder='Tên của bạn' className='input' />
             </div>
-            <div className='input-field w-full md:w-[calc(50%-2rem)] m-4 mb-[80px]'>
+            <div className='input-field w-full'>
               <label htmlFor='email' className='uppercase'>
                 Thư điện tử
               </label>
               <input type='email' id='email' name='email' placeholder='example@yourdomain' className='input' />
             </div>
-            <div className='input-field w-full md:w-[calc(100%-2rem)] m-4 mb-[80px]'>
+            <div className='input-field w-full'>
               <label htmlFor='message' className='uppercase'>
                 Lời nhắn
               </label>

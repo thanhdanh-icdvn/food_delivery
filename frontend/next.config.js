@@ -5,6 +5,7 @@ const withTwin = require('./withTwin');
 const nextConfig = {
   images: {
     domains: ['mdbcdn.b-cdn.net'],
+    unoptimized: true,
   },
   // The sass path
   sassOptions: {
@@ -27,6 +28,8 @@ const nextConfig = {
   env: {
     NEXT_MAP_BOX_ACCESSTOKEN: process.env.NEXT_MAP_BOX_ACCESSTOKEN,
   },
+  productionBrowserSourceMaps: true,
+  swcMinify: true,
   reactStrictMode: true,
 };
 

@@ -46,7 +46,7 @@ const Drawer: React.FC<DrawerProps> = ({ isShow, toggleShow }: DrawerProps) => {
               <li key={index}>
                 <div className='flex flex-row flex-wrap shadow-md rounded-md flex-grow'>
                   <div className='cart-item__left w-[calc(40%)]'>
-                    <Image src={food} alt='' className='flex flex-col w-[1/4] rounded-lg' />
+                    {food && <Image src={food} alt='' className='flex flex-col w-[1/4] rounded-lg' />}
                   </div>
                   <div className='cart-item__right w-[calc(60%)] px-2'>
                     <div className='cart-item__title'>Title</div>

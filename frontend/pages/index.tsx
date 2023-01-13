@@ -12,7 +12,6 @@ import ContactUs from '@/components/section/ContactUs';
 import AboutUs from '@/components/section/AboutUs';
 import FoodList from '@/components/section/FoodList';
 import WhyFastFood from '@/components/section/WhyFastFood';
-import Maps from '@/components/section/Maps';
 import Services from '@/components/section/Services';
 
 const serviceList: ServiceProps[] = [
@@ -126,7 +125,6 @@ export default function Home() {
       <Services serviceList={serviceList} />
       <AboutUs />
       <ContactUs />
-      <Maps />
     </>
   );
 }

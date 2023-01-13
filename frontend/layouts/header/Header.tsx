@@ -10,7 +10,7 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
     <header className={`${className ?? ''}`}>
       <div className='header-wrapper'>
         <Link className='header--left' href={'/'}>
-          <Image src={logo} alt='Logo' width={48} height={48} />
+          {logo && <Image src={logo} alt='Logo' width={48} height={48} />}
         </Link>
         <div className='header--right'>
           <ul className='inline-flex flex-row flex-wrap justify-end items-center gap-4'>

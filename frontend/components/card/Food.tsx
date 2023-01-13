@@ -7,7 +7,7 @@ const FoodCard = ({ title, featuredImageUrl, description, place }: FoodProps) =>
   return (
     <div className='food-card'>
       <div className='food-card__top'>
-        <Image className='food-card__featured-image' alt='Sirloin steak' src={featuredImageUrl} priority />
+        <Image className='food-card__featured-image' alt='Sirloin steak' src={featuredImageUrl} />
       </div>
       <div className='food-card__bottom'>
         <div>{title}</div>
