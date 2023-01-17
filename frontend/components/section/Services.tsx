@@ -1,5 +1,5 @@
 import React from 'react';
-import ServiceCard from '@/components/card/Service';
+import ServiceCard from '@/components/Card/Service';
 
 const Services = ({ serviceList }: { serviceList: ServiceProps[] }) => {
   return (

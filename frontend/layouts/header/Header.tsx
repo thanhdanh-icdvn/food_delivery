@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import Button from '@/components/button/Button';
+import Button from '@/components/Button/Button';
 import logo from 'assets/images/logo.webp';
 import Link from 'next/link';
 import IconComponent from '@/components/icon/Icon';

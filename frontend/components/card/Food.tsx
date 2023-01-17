@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { BuyButton } from 'components/button/BuyButton';
+import { BuyButton } from '@/components/Button/BuyButton';
 import IconComponent from '@/components/icon/Icon';
 
 const FoodCard = ({ title, featuredImageUrl, description, place }: FoodProps) => {

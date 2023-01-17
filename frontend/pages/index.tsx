@@ -7,12 +7,12 @@ import foodImage from 'assets/images/steak.webp';
 import foodImage2 from 'assets/images/pasta.webp';
 import foodImage3 from 'assets/images/spagettie.webp';
 
-import Banner from '@/components/banner/Banner';
-import ContactUs from '@/components/section/ContactUs';
-import AboutUs from '@/components/section/AboutUs';
-import FoodList from '@/components/section/FoodList';
-import WhyFastFood from '@/components/section/WhyFastFood';
-import Services from '@/components/section/Services';
+import Banner from '@/components/Banner/Banner';
+import ContactUs from '@/components/Section/ContactUs';
+import AboutUs from '@/components/Section/AboutUs';
+import FoodList from '@/components/Section/FoodList';
+import WhyFastFood from '@/components/Section/WhyFastFood';
+import Services from '@/components/Section/Services';
 
 const serviceList: ServiceProps[] = [
   {

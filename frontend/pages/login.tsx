@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { layouts } from './_app';
-import Button from '@/components/button/Button';
+import Button from '@/components/Button/Button';
 
 const Login = (): PageProps => {
   return (
