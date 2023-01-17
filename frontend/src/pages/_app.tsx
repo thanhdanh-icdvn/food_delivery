@@ -7,6 +7,8 @@ import GlobalStyles from '@/styles/GlobalStyles';
 import MainLayout from '@/layouts/Main';
 import MainLayoutWithSidebar from '@/layouts/MainWithSideBar';
 import MainNoHeaderNoFooter from '@/layouts/MainNoHeaderNoFooter';
+import { Analytics } from '@vercel/analytics/react';
+
 export const layouts = {
   Main: MainLayout,
   MainWithSidebar: MainLayoutWithSidebar,
@@ -23,7 +25,10 @@ const App = ({ Component, pageProps }: Props) => {
   return (
     <CacheProvider value={cache}>
       <GlobalStyles />
-      <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
+      <Layout>
+        {getLayout(<Component {...pageProps} />)}
+      </Layout>
+      <Analytics />
     </CacheProvider>
   );
 };
