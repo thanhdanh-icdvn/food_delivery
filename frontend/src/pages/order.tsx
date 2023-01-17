@@ -1,18 +1,17 @@
 import React from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import IconComponent from '@/components/Icon';
 import Button from '@/components/Button';
 import foodImage from '@/assets/images/steak.webp';
+import Meta from '@/layouts/meta';
 const Order = () => {
   return (
     <>
-      <Head>
-        <title>Order | Food Delivery App</title>
-        <meta name='description' content='The order page in food delivery app' />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
+      <Meta
+        title='Order | Food Delivery App'
+        keywords='Nextjs, strapi, order'
+        description='Order page of Food Delivery App'
+      />
       <div className='flex flex-row flex-wrap'>
         <div className='order__left flex flex-col w-full md:w-[calc(66.67%-2rem)] m-4 p-4 rounded-lg bg-white shadow-mat-2'>
           <h3 className='order__heading text-lg font-bold'>Cart</h3>

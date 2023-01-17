@@ -1,9 +1,15 @@
 import React from 'react';
 import Card from '@/components/Card';
+import Meta from '@/layouts/meta';
 
 const Profile = () => {
   return (
     <>
+      <Meta
+        title='Profile | Food Delivery App'
+        keywords='Nextjs, strapi, Profile'
+        description='Profile page of Food Delivery App'
+      />
       <div className='profile'>
         <div className='profile__summary'>
           <Card className='w-full flex flex-col'>
