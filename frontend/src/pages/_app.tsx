@@ -25,9 +25,7 @@ const App = ({ Component, pageProps }: Props) => {
   return (
     <CacheProvider value={cache}>
       <GlobalStyles />
-      <Layout>
-        {getLayout(<Component {...pageProps} />)}
-      </Layout>
+      <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
       <Analytics />
     </CacheProvider>
   );
