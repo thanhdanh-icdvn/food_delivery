@@ -9,6 +9,7 @@ const Meta = ({
   ogType,
   ogUrl,
   ogImage,
+  ogSiteName,
   ogLocale = 'vi_VN',
   fbAppId,
   twitterCardType = 'summary_large_image',
@@ -19,12 +20,12 @@ const Meta = ({
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <meta name='keywords' content={keywords} />
       <meta name='description' content={description} />
-      <meta property='og:title' content={ogTitle} />
+      <meta property='og:title' content={ogTitle ?? title} />
       <meta property='og:description' content={description} />
       <meta property='og:type' content={ogType} />
       <meta property='og:url' content={ogUrl} />
       <meta property='og:image' content={ogImage} />
-      <meta property='og:site_name' content={ogImage} />
+      <meta property='og:site_name' content={ogSiteName} />
       <meta property='og:locale' content={ogLocale} />
       <meta charSet='utf-8' />
       <meta name='twitter:card' content={twitterCardType} />
