@@ -20,6 +20,7 @@ const Meta = ({
       <meta name='keywords' content={keywords} />
       <meta name='description' content={description} />
       <meta property='og:title' content={ogTitle} />
+      <meta property='og:description' content={description} />
       <meta property='og:type' content={ogType} />
       <meta property='og:url' content={ogUrl} />
       <meta property='og:image' content={ogImage} />
