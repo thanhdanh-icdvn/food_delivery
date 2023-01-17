@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import food from 'assets/images/steak.webp';
+import food from '@/assets/images/steak.webp';
 import Button from '@/components/Button';
 
 const Drawer: React.FC<DrawerProps> = ({ isShow, toggleShow }: DrawerProps) => {

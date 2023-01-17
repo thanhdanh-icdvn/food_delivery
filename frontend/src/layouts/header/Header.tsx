@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import React from 'react';
-import Button from '@/components/Button';
-import logo from 'assets/images/logo.webp';
 import Link from 'next/link';
+import Button from '@/components/Button';
 import IconComponent from '@/components/Icon';
+import logo from '@/assets/images/logo.webp';
 
 const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
   return (

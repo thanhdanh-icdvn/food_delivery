@@ -1,9 +1,9 @@
 import React from 'react';
-import foodImage from 'assets/images/steak.webp';
+import Head from 'next/head';
 import Image from 'next/image';
 import IconComponent from '@/components/Icon';
 import Button from '@/components/Button';
-import Head from 'next/head';
+import foodImage from '@/assets/images/steak.webp';
 const Order = () => {
   return (
     <>

@@ -2,12 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/pages/*": ["pages/*"],
-      "@/components/*": ["components/*"],
-      "@/layouts/*": ["layouts/*"],
-      "@/redux/*": ["redux/*"],
-      "@/styles/*": ["styles/*"],
-      "assets/*": ["assets/*"]
+      "@/*": ["src/*"]
     },
     "types": [],
     "target": "es5",
@@ -25,6 +20,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "pages/**/*", "components/**/*", "layouts/**/*", "types"],
+  "include": ["next-env.d.ts", "src", "types"],
   "exclude": ["node_modules"]
 }
