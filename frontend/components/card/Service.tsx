@@ -1,5 +1,5 @@
 import React from 'react';
-import IconComponent from '../icon/Icon';
+import IconComponent from '@/components/Icon/Icon';
 
 const ServiceCard: React.FC<Omit<ServiceProps, 'id'>> = ({
   iconName,

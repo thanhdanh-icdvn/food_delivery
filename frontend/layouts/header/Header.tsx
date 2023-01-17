@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '@/components/Button/Button';
 import logo from 'assets/images/logo.webp';
 import Link from 'next/link';
-import IconComponent from '@/components/icon/Icon';
+import IconComponent from '@/components/Icon/Icon';
 
 const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
 import foodImage from 'assets/images/steak.webp';
 import Image from 'next/image';
-import IconComponent from '@/components/icon/Icon';
+import IconComponent from '@/components/Icon/Icon';
 import Button from '@/components/Button/Button';
 import Head from 'next/head';
 const Order = () => {
