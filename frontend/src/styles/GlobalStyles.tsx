@@ -1,11 +1,11 @@
 import React from 'react';
 import { Global } from '@emotion/react';
 import tw, { css, theme, GlobalStyles as BaseStyles } from 'twin.macro';
-import { inter } from '@/layouts/font';
+import { roboto } from '@/layouts/font';
 const customStyles = css({
   body: {
     WebkitTapHighlightColor: theme`colors.purple.500`,
-    fontFamily: inter.style.fontFamily,
+    fontFamily: roboto.style.fontFamily,
     ...tw`antialiased`,
   },
 });

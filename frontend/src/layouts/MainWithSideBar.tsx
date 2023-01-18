@@ -16,7 +16,7 @@ const MainLayoutWithSidebar = ({ children }: LayoutProps): React.ReactNode => {
       <main className='main'>
         <div className='main__inner'>
           <SideBar className='sidebar' />
-          <div className='content.has-sidebar'>{children}</div>
+          <div className='content has-sidebar'>{children}</div>
         </div>
         <Drawer isShow={isShow} toggleShow={handleToggleShow} />
       </main>
