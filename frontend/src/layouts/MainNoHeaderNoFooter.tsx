@@ -1,13 +1,11 @@
-import { Poppins } from '@next/font/google';
 import React from 'react';
 
-const poppins = Poppins({ subsets: ['latin'], weight: '400' });
 const MainNoHeaderNoFooter = ({ children }: LayoutProps): React.ReactNode => {
   return (
     <>
-      <main className={`main ${poppins.className}`}>
+      <main className={'main'}>
         <div className='main__inner'>
-          <div className='w-full flex justify-center items-center'>{children}</div>
+          <div className='flex items-center justify-center w-full'>{children}</div>
         </div>
       </main>
     </>

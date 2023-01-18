@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { layouts } from './_app';
 import Button from '@/components/Button';
 import Meta from '@/layouts/meta';
+import lotus from '@/assets/images/lotus.webp';
 
 const Login = (): PageProps => {
   return (
@@ -13,23 +14,17 @@ const Login = (): PageProps => {
         keywords='Nextjs, strapi, login'
         description='Login page of Food Delivery App'
       />
-      <section className='flex flex-col justify-center items-center h-screen'>
+      <section className='flex flex-col items-center justify-center h-screen'>
         <div className='container'>
-          <div className='flex justify-center items-center flex-wrap text-gray-800'>
+          <div className='flex flex-wrap items-center justify-center text-gray-800'>
             <div className=''>
-              <div className='block bg-white shadow-mat-3 rounded-lg'>
+              <div className='block bg-white rounded-lg shadow-mat-3'>
                 <div className='lg:flex lg:flex-wrap g-0'>
-                  <div className='lg:w-6/12 px-4 md:px-0'>
+                  <div className='px-4 lg:w-6/12 md:px-0'>
                     <div className='md:p-12 md:mx-6'>
                       <div className='text-center'>
-                        <Image
-                          className='mx-auto w-48'
-                          src='https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/lotus.webp'
-                          alt='logo'
-                          width={500}
-                          height={500}
-                        />
-                        <h4 className='text-xl font-semibold mt-1 mb-12 pb-1'>We are The Lotus Team</h4>
+                        <Image className='w-48 mx-auto' src={lotus} alt='logo' width={500} height={500} />
+                        <h4 className='pb-1 mt-1 mb-12 text-xl font-semibold'>We are The Lotus Team</h4>
                       </div>
                       <form>
                         <p className='mb-4'>Please login to your account</p>
@@ -49,7 +44,7 @@ const Login = (): PageProps => {
                             placeholder='Password'
                           />
                         </div>
-                        <div className='text-center pt-1 mb-12 pb-1'>
+                        <div className='pt-1 pb-1 mb-12 text-center'>
                           <Button type='button' full variant='primary'>
                             Log in
                           </Button>
@@ -67,11 +62,11 @@ const Login = (): PageProps => {
                     </div>
                   </div>
                   <div
-                    className='lg:w-6/12 flex items-center lg:rounded-r-lg rounded-b-lg lg:rounded-bl-none'
+                    className='flex items-center rounded-b-lg lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none'
                     style={{ background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)' }}
                   >
-                    <div className='text-white px-4 py-6 md:p-12 md:mx-6'>
-                      <h4 className='text-xl font-semibold mb-6'>We are more than just a company</h4>
+                    <div className='px-4 py-6 text-white md:p-12 md:mx-6'>
+                      <h4 className='mb-6 text-xl font-semibold'>We are more than just a company</h4>
                       <p className='text-sm'>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
