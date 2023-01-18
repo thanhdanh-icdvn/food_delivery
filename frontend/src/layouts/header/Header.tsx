@@ -4,8 +4,13 @@ import Link from 'next/link';
 import Button from '@/components/Button';
 import IconComponent from '@/components/Icon';
 import logo from '@/assets/images/logo.webp';
+import { useRouter } from 'next/router';
 
 const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
+  const router = useRouter();
+  const handleGoToLogin = () => {
+    router.push('/login');
+  };
   return (
     <header className={`${className ?? ''}`}>
       <div className='header-wrapper'>
@@ -13,7 +18,7 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
           {logo && <Image src={logo} alt='Logo' width={48} height={48} />}
         </Link>
         <div className='header--right'>
-          <ul className='inline-flex flex-row flex-wrap justify-end items-center gap-4'>
+          <ul className='inline-flex flex-row flex-wrap items-center justify-end gap-4'>
             <li>
               <Link href={'#banner'} scroll>
                 Trang chủ
@@ -54,13 +59,13 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
                 }}
               >
                 <IconComponent name='shoppingBag' width={25} height={25} className='text-secondary' />
-                <div className='absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-gray-800 bg-primary border-2 border-white rounded-full -top-2 -right-3'>
+                <div className='absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-gray-800 border-2 border-white rounded-full bg-primary -top-2 -right-3'>
                   20
                 </div>
               </Link>
             </li>
             <li>
-              <Button variant='primary' type='button' size='sm' className='!shadow-2xl'>
+              <Button variant='primary' type='button' size='sm' className='!shadow-2xl' onClick={handleGoToLogin}>
                 Sign In
               </Button>
             </li>
