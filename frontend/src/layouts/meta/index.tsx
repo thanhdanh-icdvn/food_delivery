@@ -31,6 +31,7 @@ const Meta = ({
       <meta name='twitter:card' content={twitterCardType} />
       {fbAppId && <meta property='fb.app_id' content={fbAppId || ''} />}
       <link rel='icon' href='/favicon.ico'></link>
+      <link rel='apple-touch-icon' href='/favicon.png' />
     </Head>
   );
 };
