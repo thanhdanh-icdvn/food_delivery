@@ -11,6 +11,7 @@ const includedDirs = [
 module.exports = function withTwin(nextConfig) {
   return {
     ...nextConfig,
+    /* Adding babel-loader to the webpack config. */
     webpack(config, options) {
       const { dev, isServer } = options;
       config.module = config.module || {};

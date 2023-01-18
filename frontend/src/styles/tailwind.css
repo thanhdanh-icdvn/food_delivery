@@ -247,4 +247,84 @@
   .footer-main__bottom .footer-main__sub-nav ul {
     @apply flex flex-row flex-wrap gap-8;
   }
+
+  /* Order page */
+  .order {
+    @apply flex flex-row flex-wrap relative;
+  }
+  .order .order__left {
+    @apply flex flex-col w-full lg:w-[calc(66.67%-2rem)] m-4 p-4 rounded-lg bg-white shadow-mat-2;
+  }
+  .order .order__heading {
+    @apply text-lg font-bold;
+  }
+  .order .order__list {
+    @apply flex flex-col flex-wrap gap-4;
+  }
+  .order-item__wrapper {
+    @apply bg-white rounded-lg p-4;
+  }
+  .order-item {
+    @apply flex flex-row;
+  }
+  .order-item__left .order-item__featured-image {
+    @apply max-w-full rounded-lg;
+  }
+  .order-item-right {
+    @apply flex flex-col flex-[8];
+  }
+  .order-item__title {
+    @apply flex flex-row justify-between;
+  }
+  .order-item__price {
+    @apply font-bold;
+  }
+  .order-item__stock-price-and-state {
+    @apply flex flex-row divide-x gap-2;
+  }
+  .order-item__stock-price {
+    @apply font-light text-sm;
+  }
+  .order-item__state {
+    @apply text-success-500 text-sm;
+  }
+  .order-item__info {
+    @apply flex flex-row justify-between;
+  }
+  .order-item__action {
+    @apply flex flex-row flex-wrap justify-end gap-2;
+  }
+  .order-item__add-favourite,
+  .order-item__delete {
+    @apply flex flex-row items-center;
+  }
+
+  .order__billing {
+    @apply flex flex-col h-full w-full lg:w-[calc(33.33%-2rem)] m-4 p-4 rounded-lg bg-white shadow-mat-2 justify-between lg:sticky lg:top-16 lg:left-0;
+  }
+  .fee-block {
+    @apply flex flex-row justify-between;
+  }
+
+  .order__promotion {
+    @apply flex flex-col;
+  }
+  .order__promotion-input-group {
+    @apply flex flex-row;
+  }
+  .promotion__input {
+    @apply p-1.5 rounded-lg rounded-r-none w-full outline-none border-2 border-gray-300 focus-within:border-2 focus-within:border-primary-300 focus-within:ring-primary-200;
+  }
+  .order__promotion-value {
+    @apply font-light text-gray-500;
+  }
+  .sub-total__heading,
+  .sub-total__discount,
+  .sub-total__tax,
+  .order__total {
+    @apply flex flex-row justify-between;
+  }
+  .order__action {
+    @apply flex flex-col gap-2;
+  }
 }
