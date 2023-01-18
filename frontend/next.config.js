@@ -2,6 +2,7 @@ const path = require('path');
 const withTwin = require('./withTwin');
 
 /** @type {import('next').NextConfig} */
+/* A configuration for next.js. */
 const nextConfig = {
   images: {
     domains: ['mdbcdn.b-cdn.net'],

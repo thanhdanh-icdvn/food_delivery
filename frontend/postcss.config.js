@@ -1,3 +1,4 @@
+/* A configuration file for postcss. */
 module.exports = {
   plugins: {
     'postcss-flexbugs-fixes': {},

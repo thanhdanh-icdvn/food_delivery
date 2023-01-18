@@ -1,3 +1,4 @@
+/* A comment that tells the typescript compiler that the following code is a valid tailwind config. */
 /** @type {import('tailwindcss').Config} */
 
 const colorPalette = {
@@ -126,6 +127,7 @@ const colorPalette = {
     900: '#1a4d27',
   },
 };
+/* This is the tailwind config file. */
 module.exports = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx}',
