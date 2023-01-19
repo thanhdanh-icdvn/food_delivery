@@ -24,7 +24,7 @@
     "@emotion/server": "^11.10.0",
     "@emotion/styled": "^11.10.5",
     "@heroicons/react": "^2.0.13",
-    "@next/font": "13.0.7",
+    "@next/font": "13.1.1",
     "@reduxjs/toolkit": "^1.9.1",
     "@vercel/analytics": "^0.1.8",
     "eslint": "8.30.0",
