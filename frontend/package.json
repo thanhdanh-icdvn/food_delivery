@@ -27,7 +27,7 @@
     "@next/font": "13.0.7",
     "@reduxjs/toolkit": "^1.9.1",
     "@vercel/analytics": "^0.1.8",
-    "eslint": "8.30.0",
+    "eslint": "8.31.0",
     "eslint-config-next": "13.0.7",
     "framer-motion": "^8.4.6",
     "mapbox-gl": "^2.12.0",
