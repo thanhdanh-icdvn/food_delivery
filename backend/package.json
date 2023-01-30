@@ -10,11 +10,15 @@
     "strapi": "strapi"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@lezer/common": "^1.0.2",
+    "install-peers": "^1.0.4",
+    "react-is": "^18.2.0",
     "webpack": "^5.75.0"
   },
   "dependencies": {
-    "@strapi/plugin-i18n": "4.5.6",
-    "@strapi/plugin-users-permissions": "4.5.6",
+    "@strapi/plugin-i18n": "4.6.0",
+    "@strapi/plugin-users-permissions": "4.6.0",
     "@strapi/strapi": "4.6.0",
     "better-sqlite3": "7.4.6"
   },
