@@ -13,7 +13,7 @@ const Drawer: React.FC<DrawerProps> = ({ isShow }: DrawerProps) => {
       <div className='drawer__bottom'>
         <div className='flex flex-col w-full gap-3 process-button-list'>
           <Button variant='primary'>Thanh toán</Button>
-          <Button outlined>Hoặc tiếp tục mua sắm</Button>
+          <Button>Hoặc tiếp tục mua sắm</Button>
         </div>
       </div>
     </div>
