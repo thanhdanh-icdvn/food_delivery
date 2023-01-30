@@ -28,7 +28,7 @@ const Button = styled.button<ButtonProps>(
     full && tw`w-full`,
     outlined == true &&
       variant === 'default' &&
-      tw`border-2 text-slate-800 hover:text-slate-800 border-slate-200 hover:bg-slate-300 focus:ring-4 focus:outline-none focus:ring-slate-300`,
+      tw`border-2 text-slate-800 hover:text-slate-800 border-default-300 hover:bg-default-300 focus:ring-4 focus:outline-none focus:ring-default-200`,
     outlined === true &&
       variant === 'dark' &&
       tw`border-2 text-dark-800 hover:text-white border-dark-800 hover:bg-dark-900 focus:ring-4 focus:outline-none focus:ring-dark-300`,
@@ -79,7 +79,7 @@ const Button = styled.button<ButtonProps>(
       tw`text-gray-800 border bg-primary hover:text-gray-800 border-primary hover:bg-primary-400 focus:ring-4 focus:outline-none focus:ring-primary-200`,
     outlined == false &&
       variant === 'default' &&
-      tw`text-gray-800 bg-slate-100 border border-transparent hover:text-gray-800 hover:bg-slate-200 focus:ring-4 focus:outline-none focus:ring-gray-200`,
+      tw`text-gray-800 border border-transparent bg-default-100 hover:text-gray-800 hover:bg-default-300 focus:ring-4 focus:outline-none focus:ring-default-200`,
   ]
 );
 
