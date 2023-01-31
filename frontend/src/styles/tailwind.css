@@ -121,7 +121,7 @@
     @apply overflow-auto;
   }
   .fast-food-card > .fast-food-card__top > .fast-food-card__featured-image {
-    @apply object-cover aspect-square;
+    @apply object-cover;
   }
   .fast-food-card > .fast-food-card__bottom {
     @apply flex flex-col items-center justify-center px-6 pb-6 text-center text-tertiary;

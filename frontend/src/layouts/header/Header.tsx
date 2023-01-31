@@ -18,7 +18,7 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
           {logo && <Image src={logo} alt='Logo' width={48} height={48} />}
         </Link>
         <div className='header--right'>
-          <ul className='inline-flex flex-row flex-wrap items-center justify-end gap-4'>
+          <ul className='flex-row flex-wrap items-center justify-end gap-4 hidden lg:inline-flex'>
             <li>
               <Link href={'#banner'} scroll>
                 Trang chủ
@@ -70,6 +70,7 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
               </Button>
             </li>
           </ul>
+          <div className='burger-menu flex flex-col justify-center items-center lg:hidden'>Menu</div>
         </div>
       </div>
     </header>
