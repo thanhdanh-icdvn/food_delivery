@@ -32,6 +32,7 @@ const nextConfig = {
   productionBrowserSourceMaps: true,
   swcMinify: true,
   reactStrictMode: true,
+  output: 'standalone',
 };
 
 module.exports = withTwin(nextConfig);
