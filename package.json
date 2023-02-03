@@ -2,22 +2,41 @@
   "version": "1.0.0",
   "name": "food_delivery",
   "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": []
+  },
   "author": {
     "name": "thanhd",
     "email": "thanhdanh@icd-vn.com",
     "url": "https://fb.com/danh.thanh.418"
   },
   "scripts": {
-    "develop": "concurrently -k \"yarn backend\" \"yarn frontend\"",
-    "frontend": "yarn --cwd frontend dev",
-    "backend": "yarn --cwd backend develop",
+    "develop": "concurrently -k \"yarn backend:dev\" \"yarn frontend:dev\"",
+    "build": "concurrently -k \"yarn backend:build\" \"yarn frontend:build\"",
+    "start": "concurrently -k \"yarn backend:start\" \"yarn frontend:start\"",
+    "frontend:build": "yarn workspace frontend dev",
+    "backend:build": "yarn workspace backend develop",
+    "frontend:dev": "yarn workspace frontend dev",
+    "backend:dev": "yarn workspace backend develop",
+    "frontend:start": "yarn workspace frontend start",
+    "backend:start": "yarn workspace backend start",
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@babel/core": "^7.20.12",
     "concurrently": "^7.6.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-select": "^5.7.0",
+    "sharp": "^0.31.3"
+  }
 }
