@@ -1,7 +1,7 @@
 # Frontend Dockerfile
-FROM node:18-alpine AS frontend
+FROM node:18-bullseye AS frontend
 
-# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodebullseye to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
 
 WORKDIR /app
@@ -11,7 +11,7 @@ COPY ./frontend .
 RUN yarn build
 
 # Backend Dockerfile
-FROM node:18-alpine AS backend
+FROM node:18-bullseye AS backend
 WORKDIR /app
 COPY ./backend/package.json ./backend/yarn.lock ./
 RUN yarn install --frozen-lockfile
@@ -20,7 +20,7 @@ EXPOSE 1337
 CMD ["yarn", "start"]
 
 # Final Dockerfile
-FROM node:18-alpine
+FROM node:18-bullseye
 WORKDIR /app
 
 ENV NODE_ENV production
