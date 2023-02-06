@@ -15,10 +15,10 @@
   },
   "scripts": {
     "develop": "concurrently -k \"yarn backend:dev\" \"yarn frontend:dev\"",
-    "build": "concurrently -k \"yarn backend:build\" \"yarn frontend:build\"",
+    "build": "concurrently \"yarn backend:build\" \"yarn frontend:build\"",
     "start": "concurrently -k \"yarn backend:start\" \"yarn frontend:start\"",
-    "frontend:build": "yarn workspace frontend dev",
-    "backend:build": "yarn workspace backend develop",
+    "frontend:build": "yarn workspace frontend build",
+    "backend:build": "yarn workspace backend build",
     "frontend:dev": "yarn workspace frontend dev",
     "backend:dev": "yarn workspace backend develop",
     "frontend:start": "yarn workspace frontend start",
