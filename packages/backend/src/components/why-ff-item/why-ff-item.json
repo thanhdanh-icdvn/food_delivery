@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_service_item_service_items",
+  "collectionName": "components_why_ff_item_why_ff_items",
   "info": {
-    "displayName": "Service Item",
+    "displayName": "Why FF Item",
     "description": ""
   },
   "options": {},
@@ -11,11 +11,11 @@
       "required": true
     },
     "description": {
-      "type": "text"
+      "type": "richtext"
     },
-    "icon": {
+    "image": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images"

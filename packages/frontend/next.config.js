@@ -5,7 +5,7 @@ const withTwin = require('./withTwin');
 /* A configuration for next.js. */
 const nextConfig = {
   images: {
-    domains: ['mdbcdn.b-cdn.net'],
+    domains: ['mdbcdn.b-cdn.net', 'localhost'],
     unoptimized: true,
   },
   // The sass path

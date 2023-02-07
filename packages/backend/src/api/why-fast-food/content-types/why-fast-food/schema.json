@@ -4,31 +4,24 @@
   "info": {
     "singularName": "why-fast-food",
     "pluralName": "why-fast-foods",
-    "displayName": "Why Fast Food"
+    "displayName": "Why Fast Food",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "Name": {
-      "type": "string",
-      "required": true,
-      "unique": true
+    "name": {
+      "type": "string"
     },
-    "FeaturedImage": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": false,
-      "required": true
+    "description": {
+      "type": "richtext"
     },
-    "Description": {
-      "type": "text"
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "why-ff-item.why-ff-item"
     }
   }
 }

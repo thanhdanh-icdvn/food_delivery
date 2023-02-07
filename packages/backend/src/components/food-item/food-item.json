@@ -1,30 +1,29 @@
 {
   "collectionName": "components_food_item_food_items",
   "info": {
-    "displayName": "Food Item"
+    "displayName": "Food Item",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true,
-      "unique": true
+      "unique": false
     },
-    "Description": {
+    "description": {
       "type": "richtext"
     },
-    "Location": {
+    "location": {
       "type": "string"
     },
-    "Image": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
+    "image": {
       "type": "media",
-      "multiple": true
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
     }
   }
 }
