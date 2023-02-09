@@ -6,7 +6,18 @@
     "packages": [
       "packages/*"
     ],
-    "nohoist": []
+    "nohoist": [
+      "**/react",
+      "**/react-dom",
+      "**/react-router-dom",
+      "**/react-select",
+      "**/sharp",
+      "**/react/**",
+      "**/react-dom/**",
+      "**/react-router-dom/**",
+      "**/react-select/**",
+      "**/sharp/**"
+    ]
   },
   "author": {
     "name": "thanhd",
