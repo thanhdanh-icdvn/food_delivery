@@ -13,9 +13,9 @@
     "@babel/core": "^7.20.12",
     "@babel/runtime": "^7.20.13",
     "@lezer/common": "^1.0.2",
+    "codemirror": "^5.0.1",
     "install-peers": "^1.0.4",
-    "webpack": "^5.75.0",
-    "codemirror": "^5.0.1"
+    "webpack": "^5.75.0"
   },
   "dependencies": {
     "@strapi/design-system": "^1.6.3",

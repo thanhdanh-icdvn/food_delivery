@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_partners",
+  "info": {
+    "displayName": "partner",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "logoItems": {
+      "displayName": "logo",
+      "type": "component",
+      "repeatable": true,
+      "component": "page.logo"
+    }
+  }
+}

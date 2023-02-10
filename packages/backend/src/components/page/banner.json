@@ -1,0 +1,22 @@
+{
+  "collectionName": "components_page_banners",
+  "info": {
+    "displayName": "Banner",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "buttons": {
+      "displayName": "button",
+      "type": "component",
+      "repeatable": true,
+      "component": "page.button"
+    }
+  }
+}
