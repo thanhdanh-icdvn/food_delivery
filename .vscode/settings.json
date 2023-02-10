@@ -21,5 +21,18 @@
   "css.lint.unknownAtRules": "ignore",
   "[svg]": {
     "editor.defaultFormatter": "jock.svg"
+  },
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "version": "v2",
+      "host": "localhost",
+      "localToken": "bd94e4c2abc2247165017c534b3ba81abef398beaaaa8514e306936ea21b43c54bbc8301b1f2338ba1a136526bab8d9bdc3426e05da8466de9cd5a0c8309e779600630dbfd29d50acd9d0173352f741634a13ea6edcd8e29b079f473066823e2d1a1c2dd60bf5449e918b89cf34e26261c4141543ca95908cfde2e0691829c8b"
+    },
+    "local": {
+      "version": "v2",
+      "host": "localhost",
+      "token": "{{$shared localToken}}",
+      "secretKey": "devSecret"
+    }
   }
 }

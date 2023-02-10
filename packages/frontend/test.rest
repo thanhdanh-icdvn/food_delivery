@@ -1,4 +1,4 @@
-@token =7a55312a3b60903891402f3499efc4f3fbd9d6663fdf4c51220dc6f38255191a79dacf3e9b4c190a347d3706ea050416d213281fe8b4bcbc4bd2d79dd39ddb1cf32247d5c77cd48055c938bea32c3ec0178d9639e07215c6ba7ddf08c2aba72965ecab2f539fc5ce9be595044a987fd58ebcfd7f86f69802b61f0606f5d34f33
+@token ={{localToken}}
 
 ### Get all services
 GET  http://localhost:1337/api/services?populate=deep HTTP/1.1
@@ -39,6 +39,6 @@ Content-Type: application/json
 Authorization: Bearer {{token}}
 
 ### Get all menus
-GET http://localhost:1337/api/trang-chu?populate=deep HTTP/1.1
+GET http://localhost:1337/api/home?populate=deep HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer {{token}}
