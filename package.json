@@ -20,7 +20,13 @@
       "**/sharp",
       "**/sharp/**",
       "**/swiper",
-      "**/swiper/**"
+      "**/swiper/**",
+      "**/typescript",
+      "**/typescript/**",
+      "**/@typescript-eslint",
+      "**/@typescript-eslint/**",
+      "**/@babel",
+      "**/@babel/**"
     ]
   },
   "author": {
@@ -38,15 +44,17 @@
     "backend:dev": "yarn workspace backend develop",
     "frontend:start": "yarn workspace frontend start",
     "backend:start": "yarn workspace backend start",
+    "db:export": "pg_dump -U food_delivery_admin food_delivery > food_delivery.pgsql",
     "prepare": "husky install"
   },
+  "dependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.20.12",
+    "@commitlint/cli": "^17.4.2",
+    "@commitlint/config-conventional": "^17.4.2",
     "concurrently": "^7.6.0",
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1"
   },
-  "license": "MIT",
-  "dependencies": {}
+  "license": "MIT"
 }

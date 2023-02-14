@@ -1,10 +1,4 @@
 {
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  // Add those two lines:
-  "editor.formatOnSave": true, // Tell VSCode to format files on save
-  "editor.defaultFormatter": "esbenp.prettier-vscode", // Tell VSCode to use Prettier as default file formatter
   "tailwindCSS.experimental.classRegex": [
     "tw`([^`]*)", // tw`...`
     "tw=\"([^\"]*)", // <div tw="..." />
@@ -19,9 +13,6 @@
   "scss.lint.unknownAtRules": "ignore",
   "css.lint.unknownProperties": "ignore",
   "css.lint.unknownAtRules": "ignore",
-  "[svg]": {
-    "editor.defaultFormatter": "jock.svg"
-  },
   "rest-client.environmentVariables": {
     "$shared": {
       "version": "v2",
@@ -34,5 +25,6 @@
       "token": "{{$shared localToken}}",
       "secretKey": "devSecret"
     }
-  }
+  },
+  "eslint.workingDirectories": [{ "mode": "auto" }]
 }

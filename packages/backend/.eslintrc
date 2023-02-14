@@ -1,27 +1,38 @@
 {
-  "parser": "babel-eslint",
-  "extends": "eslint:recommended",
-  "env": {
-    "commonjs": true,
-    "es6": true,
-    "node": true,
-    "browser": false
+  "parser": "@babel/eslint-parser",
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
   },
   "parserOptions": {
     "ecmaFeatures": {
-      "experimentalObjectRestSpread": true,
-      "jsx": false
-    },
-    "sourceType": "module"
+      "jsx": true
+    }
   },
-  "globals": {
-    "strapi": true
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
   },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/strict",
+    "prettier"
+  ],
+  "plugins": ["react", "jsx-a11y"],
+  "root": true,
+  "ignorePatterns": ["node_modules/**/*"],
   "rules": {
-    "indent": ["error", 2, { "SwitchCase": 1 }],
-    "linebreak-style": ["error", "unix"],
-    "no-console": 0,
-    "quotes": ["error", "single"],
-    "semi": ["error", "always"]
+    "react-hooks/exhaustive-deps": "error",
+    "quotes": [2, "single", { "avoidEscape": true }],
+    "no-var": "error",
+    "prefer-const": "error",
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off"
   }
 }

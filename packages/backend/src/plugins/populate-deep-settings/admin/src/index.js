@@ -4,7 +4,8 @@ import pluginId from './pluginId';
 import Initializer from './components/Initializer';
 import PluginIcon from './components/PluginIcon';
 
-const name = pluginPkg.strapi.name;
+const { name } = pluginPkg.strapi;
+const { displayName } = pluginPkg.strapi;
 
 export default {
   register(app) {
@@ -33,29 +34,24 @@ export default {
       initializer: Initializer,
       isReady: false,
       name,
+      displayName,
     });
   },
 
-  bootstrap(app) {},
+  bootstrap() {},
   async registerTrads({ locales }) {
     const importedTrads = await Promise.all(
-      locales.map((locale) => {
-        return import(
-          /* webpackChunkName: "translation-[request]" */ `./translations/${locale}.json`
-        )
-          .then(({ default: data }) => {
-            return {
-              data: prefixPluginTranslations(data, pluginId),
-              locale,
-            };
-          })
-          .catch(() => {
-            return {
-              data: {},
-              locale,
-            };
-          });
-      })
+      locales.map(locale =>
+        import(/* webpackChunkName: "translation-[request]" */ `./translations/${locale}.json`)
+          .then(({ default: data }) => ({
+            data: prefixPluginTranslations(data, pluginId),
+            locale,
+          }))
+          .catch(() => ({
+            data: {},
+            locale,
+          }))
+      )
     );
 
     return Promise.resolve(importedTrads);

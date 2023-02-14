@@ -1,6 +1,6 @@
 module.exports = ({ env }) => ({
   /* A plugin that allows you to populate deep relationships. */
-  "strapi-plugin-populate-deep": {
+  'strapi-plugin-populate-deep': {
     config: {
       defaultDepth: 6, // Default is 5
     },
@@ -8,7 +8,7 @@ module.exports = ({ env }) => ({
   /* Setting up the email provider. */
   email: {
     config: {
-      provider: "sendmail",
+      provider: 'sendmail',
       /* For DKIM. */
       // providerOptions: {
       //   dkim: {
@@ -17,13 +17,9 @@ module.exports = ({ env }) => ({
       //   },
       // },
       settings: {
-        defaultFrom: env("EMAIL_DEFAULT_FROM", ""),
-        defaultReplyTo: env("EMAIL_DEFAULT_REPLY_TO", ""),
+        defaultFrom: env('EMAIL_DEFAULT_FROM', ''),
+        defaultReplyTo: env('EMAIL_DEFAULT_REPLY_TO', ''),
       },
     },
-  },
-  "populate-deep-settings": {
-    enabled: true,
-    resolve: "./src/plugins/populate-deep-settings",
   },
 });
