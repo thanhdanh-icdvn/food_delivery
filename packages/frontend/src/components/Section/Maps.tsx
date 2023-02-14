@@ -1,5 +1,11 @@
 import React from 'react';
-import { FullscreenControl, GeolocateControl, Map, NavigationControl, ScaleControl } from 'react-map-gl';
+import {
+  FullscreenControl,
+  GeolocateControl,
+  Map,
+  NavigationControl,
+  ScaleControl,
+} from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 
 const Maps: React.FunctionComponent = () => {

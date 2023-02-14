@@ -45,7 +45,9 @@ const FoodList = ({ foodList = [] }: { foodList: FoodProps[] | [] }) => {
     <section id='food' className='section food'>
       <div className='section__heading'>
         <h2 className='section__title'>Thực phẩm</h2>
-        <div className='section__sub-title'>Nhà hàng hàng đầu để ăn ngoài trời hoặc ăn trong nhà!</div>
+        <div className='section__sub-title'>
+          Nhà hàng hàng đầu để ăn ngoài trời hoặc ăn trong nhà!
+        </div>
       </div>
       <div className='section__content'>
         <Swiper {...swiperOptions} className='flex flex-col z-[1] py-20'>

@@ -21,7 +21,12 @@ const Order = () => {
                 <li className='order-item__wrapper' key={index}>
                   <div className='order-item flex flex-row'>
                     <div className='order-item__left'>
-                      <Image className='order-item__featured-image' src={foodImage} alt={'food'} width={100} />
+                      <Image
+                        className='order-item__featured-image'
+                        src={foodImage}
+                        alt={'food'}
+                        width={100}
+                      />
                     </div>
                     <div className='order-item-right'>
                       <div className='order-item__title'>

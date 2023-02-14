@@ -1,5 +1,12 @@
 import React from 'react';
-import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
+import Document, {
+  Html,
+  Head,
+  Main,
+  NextScript,
+  DocumentContext,
+  DocumentInitialProps,
+} from 'next/document';
 import { extractCritical } from '@emotion/server';
 
 type NewDocumentInitialProps = DocumentInitialProps & {
@@ -15,7 +22,10 @@ class CustomDocument extends Document<NewDocumentInitialProps> {
     initialProps.styles = (
       <>
         {initialProps.styles}
-        <style data-emotion-css={critical.ids.join(' ')} dangerouslySetInnerHTML={{ __html: critical.css }} />
+        <style
+          data-emotion-css={critical.ids.join(' ')}
+          dangerouslySetInnerHTML={{ __html: critical.css }}
+        />
       </>
     );
 
@@ -26,7 +36,10 @@ class CustomDocument extends Document<NewDocumentInitialProps> {
     return (
       <Html lang='en'>
         <Head>
-          <style data-emotion-css={this.props?.ids?.join(' ')} dangerouslySetInnerHTML={{ __html: this.props.css }} />
+          <style
+            data-emotion-css={this.props?.ids?.join(' ')}
+            dangerouslySetInnerHTML={{ __html: this.props.css }}
+          />
         </Head>
         <body>
           <Main />

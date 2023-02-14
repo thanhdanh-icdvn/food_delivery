@@ -58,19 +58,32 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
                   handleToggleDrawer();
                 }}
               >
-                <IconComponent name='shoppingBag' width={25} height={25} className='text-secondary' />
+                <IconComponent
+                  name='shoppingBag'
+                  width={25}
+                  height={25}
+                  className='text-secondary'
+                />
                 <div className='absolute inline-flex items-center justify-center w-6 h-6 text-xs font-bold text-gray-800 border-2 border-white rounded-full bg-primary -top-2 -right-3'>
                   20
                 </div>
               </Link>
             </li>
             <li>
-              <Button variant='primary' type='button' size='sm' className='!shadow-2xl' onClick={handleGoToLogin}>
+              <Button
+                variant='primary'
+                type='button'
+                size='sm'
+                className='!shadow-2xl'
+                onClick={handleGoToLogin}
+              >
                 Sign In
               </Button>
             </li>
           </ul>
-          <div className='burger-menu flex flex-col justify-center items-center lg:hidden'>Menu</div>
+          <div className='burger-menu flex flex-col justify-center items-center lg:hidden'>
+            Menu
+          </div>
         </div>
       </div>
     </header>

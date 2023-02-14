@@ -19,7 +19,8 @@ const serviceList: ServiceProps[] = [
     id: 1,
     iconName: 'priceTag',
     title: 'Hệ thống chiết khấu',
-    description: 'Chúng tôi có hệ thống giảm giá thuận lợi cho khách hàng thường xuyên của chúng tôi',
+    description:
+      'Chúng tôi có hệ thống giảm giá thuận lợi cho khách hàng thường xuyên của chúng tôi',
   },
   {
     id: 2,

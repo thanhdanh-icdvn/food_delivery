@@ -74,13 +74,13 @@
     @apply flex flex-col justify-center gap-2;
   }
   .banner > .banner__content > .banner__heading {
-    text-shadow: #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px,
-      #fff 0px 0px 2px;
+    text-shadow: #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px,
+      #fff 0px 0px 2px, #fff 0px 0px 2px;
     @apply font-black text-[56px] leading-[1.25] md:text-[75px] md:leading-[1.5];
   }
   .banner > .banner__content > .banner__description {
-    text-shadow: #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px,
-      #fff 0px 0px 2px;
+    text-shadow: #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px, #fff 0px 0px 2px,
+      #fff 0px 0px 2px, #fff 0px 0px 2px;
     @apply text-xl md:text-3xl leading-[1.25] md:leading-[1.5];
   }
 
@@ -177,7 +177,8 @@
   }
 
   .section__content--about-us {
-    background-image: url('../assets/images/about-us-2_bg.webp'), url('../assets/images/about-us_bg.webp');
+    background-image: url('../assets/images/about-us-2_bg.webp'),
+      url('../assets/images/about-us_bg.webp');
     background-position: right top 60%, right 0 center;
     background-size: auto, contain;
     background-repeat: no-repeat, no-repeat;

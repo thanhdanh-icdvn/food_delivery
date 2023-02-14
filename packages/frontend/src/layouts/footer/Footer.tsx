@@ -11,7 +11,9 @@ const Footer = ({ className }: FooterProps) => {
           <li>
             <div className='footer-main__logo'>
               {logo && <Image src={logo} alt='Logo' width={48} />}
-              <p className='font-light'>Bất cứ nơi nào, bất cứ lúc nào, tận hưởng thời gian mua sắm của bạn </p>
+              <p className='font-light'>
+                Bất cứ nơi nào, bất cứ lúc nào, tận hưởng thời gian mua sắm của bạn{' '}
+              </p>
             </div>
           </li>
           <li className='menu-item-group'>

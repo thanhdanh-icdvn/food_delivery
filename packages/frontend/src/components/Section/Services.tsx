@@ -13,7 +13,10 @@ const Services = ({ serviceList }: { serviceList: ServiceProps[] }) => {
           <ul className='service-list flex flex-row flex-wrap'>
             {serviceList?.map(service => {
               return (
-                <li key={service.id} className='flex flex-col w-full md:w-[calc(50%-2rem)] m-2 md:m-4'>
+                <li
+                  key={service.id}
+                  className='flex flex-col w-full md:w-[calc(50%-2rem)] m-2 md:m-4'
+                >
                   <ServiceCard {...service} />
                 </li>
               );
