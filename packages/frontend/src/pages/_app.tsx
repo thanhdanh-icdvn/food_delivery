@@ -8,6 +8,7 @@ import MainLayout from '@/layouts/Main';
 import MainLayoutWithSidebar from '@/layouts/MainWithSideBar';
 import MainNoHeaderNoFooter from '@/layouts/MainNoHeaderNoFooter';
 import { Analytics } from '@vercel/analytics/react';
+import { SessionProvider } from 'next-auth/react';
 
 export const layouts = {
   Main: MainLayout,
@@ -23,11 +24,13 @@ const App = ({ Component, pageProps }: Props) => {
   const Layout = Component.layout ?? MainLayout;
   const getLayout = Component.getLayout ?? ((page: React.ReactNode) => page);
   return (
-    <CacheProvider value={cache}>
-      <GlobalStyles />
-      <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
-      <Analytics />
-    </CacheProvider>
+    <SessionProvider>
+      <CacheProvider value={cache}>
+        <GlobalStyles />
+        <Layout>{getLayout(<Component {...pageProps} />)}</Layout>
+        <Analytics />
+      </CacheProvider>
+    </SessionProvider>
   );
 };
 

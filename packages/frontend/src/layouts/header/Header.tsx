@@ -1,16 +1,20 @@
 import Image from 'next/image';
 import React from 'react';
 import Link from 'next/link';
-import Button from '@/components/Button';
 import IconComponent from '@/components/Icon';
 import logo from '@/assets/images/logo.webp';
-import { useRouter } from 'next/router';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
-  const router = useRouter();
-  const handleGoToLogin = () => {
-    router.push('/login');
+  const handleSignin = (e: React.MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
+    e.preventDefault();
+    signIn();
   };
+  const handleSignout = (e: React.MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
+    e.preventDefault();
+    signOut();
+  };
+  const { data: session } = useSession();
   return (
     <header className={`${className ?? ''}`}>
       <div className='header-wrapper'>
@@ -69,17 +73,33 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
                 </div>
               </Link>
             </li>
-            <li>
-              <Button
-                variant='primary'
-                type='button'
-                size='sm'
-                className='!shadow-2xl'
-                onClick={handleGoToLogin}
-              >
-                Sign In
-              </Button>
-            </li>
+            {!session && (
+              <li>
+                <button
+                  className='!shadow-2xl flex justify-center items-center gap-3'
+                  onClick={e => handleSignin(e)}
+                >
+                  Sign In
+                </button>
+              </li>
+            )}
+            {session?.user && (
+              <li>
+                <button
+                  className='!shadow-2xl flex justify-center items-center gap-3'
+                  onClick={e => handleSignout(e)}
+                >
+                  <Image
+                    src={session.user.image as string}
+                    alt='User profile avatar'
+                    width={10}
+                    height={10}
+                    className='w-7 h-7 rounded-full'
+                  />
+                  {session?.user.name}
+                </button>
+              </li>
+            )}
           </ul>
           <div className='burger-menu flex flex-col justify-center items-center lg:hidden'>
             Menu

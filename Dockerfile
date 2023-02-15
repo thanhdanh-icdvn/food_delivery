@@ -10,9 +10,8 @@ COPY ./packages/frontend/package.json ./packages/frontend/
 RUN yarn install
 
 # backend
-WORKDIR /app/
-COPY ./packages/backend/ ./packages/backend/
-EXPOSE 1337
+
+
 
 # Frontend
 WORKDIR /app/
