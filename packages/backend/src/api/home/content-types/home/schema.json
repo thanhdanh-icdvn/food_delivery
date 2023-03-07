@@ -18,15 +18,20 @@
       "repeatable": false,
       "component": "page.banner"
     },
-    "quote": {
-      "type": "component",
-      "repeatable": false,
-      "component": "page.text-block"
-    },
     "partner": {
       "type": "component",
       "repeatable": false,
       "component": "page.partner"
+    },
+    "introductions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.introduction-block"
+    },
+    "foodList": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.food-card"
     }
   }
 }

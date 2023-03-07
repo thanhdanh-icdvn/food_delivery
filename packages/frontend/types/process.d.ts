@@ -14,5 +14,7 @@ declare namespace NodeJS {
     AUTH0_SECRET: string;
     EMAIL_SERVER: string;
     EMAIL_FROM: string;
+    NEXT_GOOGLE_LOGIN_CLIENT: string;
+    NEXT_GOOGLE_LOGIN_BACKEND: string;
   }
 }

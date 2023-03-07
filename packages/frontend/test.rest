@@ -38,7 +38,7 @@ GET http://localhost:1337/api/menus?populate=deep HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer {{token}}
 
-### Get all menus
+### Get all homepage
 GET http://localhost:1337/api/home?populate=deep HTTP/1.1
 Content-Type: application/json
 Authorization: Bearer {{token}}

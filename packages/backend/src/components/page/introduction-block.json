@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_page_introduction_blocks",
+  "info": {
+    "displayName": "introduction_block",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "text"
+    },
+    "introductionItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.introduction"
+    }
+  }
+}

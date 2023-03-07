@@ -8,7 +8,7 @@ import { signIn, signOut, useSession } from 'next-auth/react';
 const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
   const handleSignin = (e: React.MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
     e.preventDefault();
-    signIn();
+    signIn('google');
   };
   const handleSignout = (e: React.MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
           {logo && <Image src={logo} alt='Logo' width={48} height={48} />}
         </Link>
         <div className='header--right'>
-          <ul className='flex-row flex-wrap items-center justify-end gap-4 hidden lg:inline-flex'>
+          <ul className='flex-row flex-wrap items-center justify-end hidden gap-4 lg:inline-flex'>
             <li>
               <Link href={'#banner'} scroll>
                 Trang chủ
@@ -94,14 +94,14 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
                     alt='User profile avatar'
                     width={10}
                     height={10}
-                    className='w-7 h-7 rounded-full'
+                    className='rounded-full w-7 h-7'
                   />
                   {session?.user.name}
                 </button>
               </li>
             )}
           </ul>
-          <div className='burger-menu flex flex-col justify-center items-center lg:hidden'>
+          <div className='flex flex-col items-center justify-center burger-menu lg:hidden'>
             Menu
           </div>
         </div>

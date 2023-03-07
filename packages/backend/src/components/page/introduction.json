@@ -1,7 +1,7 @@
 {
-  "collectionName": "components_page_logos",
+  "collectionName": "components_page_introductions",
   "info": {
-    "displayName": "logo",
+    "displayName": "introduction",
     "description": ""
   },
   "options": {},
@@ -9,7 +9,7 @@
     "title": {
       "type": "string"
     },
-    "caption": {
+    "description": {
       "type": "text"
     },
     "image": {
@@ -22,9 +22,6 @@
         "videos",
         "audios"
       ]
-    },
-    "url": {
-      "type": "string"
     }
   }
 }

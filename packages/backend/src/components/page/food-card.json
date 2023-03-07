@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_page_food_cards",
+  "info": {
+    "displayName": "foodCard"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "location": {
+      "type": "enumeration",
+      "enum": [
+        "Hà Nội",
+        "Hồ Chí Minh",
+        "Đà Nẵng"
+      ]
+    },
+    "button": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.button"
+    },
+    "image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
