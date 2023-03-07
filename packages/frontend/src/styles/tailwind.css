@@ -45,13 +45,13 @@
 
   /* Profile page */
   .profile {
-    @apply flex flex-row flex-wrap my-6 gap-x-6;
+    @apply flex flex-row flex-wrap my-6 gap-y-6 md:gap-x-6;
   }
   .profile .profile__summary {
-    @apply flex w-[calc(25%-0.75rem)];
+    @apply flex lg:w-[calc(33.33%-0.75rem)] md:w-[calc(50%-0.75rem)] w-full;
   }
   .profile .profile__details {
-    @apply flex flex-col w-[calc(75%-0.75rem)] gap-y-6;
+    @apply flex flex-col lg:w-[calc(66.67%-0.75rem)] md:w-[calc(50%-0.75rem)] gap-y-6 w-full;
   }
   /* Index page */
   .banner {
@@ -207,7 +207,7 @@
   }
 
   .footer-main {
-    @apply relative lg:pt-24;
+    @apply relative;
   }
 
   .footer-main::before {
@@ -215,15 +215,24 @@
     position: absolute;
     top: 0px;
     width: 100%;
-    height: 100%;
-    background-image: url('../assets/images/footer_bg.webp');
+    height: 11.458vw;
+    background-image: url('../assets/images/footer-bg_top.webp');
     background-repeat: no-repeat;
     z-index: -1;
-    background-size: cover;
+    background-size: 100% auto;
     background-position: top;
   }
+  .footer-main::after{
+    content: '';
+    position: absolute;
+    background-color: #fffaee;
+    height: calc(100% - 11.458vw);
+    top: 11.458vw;
+    z-index: -1;
+    width: 100%;
+  }
   .footer-main__wrapper {
-    @apply flex flex-row flex-wrap justify-between px-4 pt-44;
+    @apply flex flex-row flex-wrap justify-between px-4 pt-[11.458vw];
   }
 
   .menu-item-group__title {
