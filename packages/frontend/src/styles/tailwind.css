@@ -45,22 +45,14 @@
 
   /* Profile page */
   .profile {
-    @apply flex flex-row flex-wrap;
+    @apply flex flex-row flex-wrap my-6 gap-x-6;
   }
   .profile .profile__summary {
-    @apply flex w-[calc(25%)];
+    @apply flex w-[calc(25%-0.75rem)];
   }
   .profile .profile__details {
-    @apply flex flex-col w-[calc(75%)];
+    @apply flex flex-col w-[calc(75%-0.75rem)] gap-y-6;
   }
-
-  .profile__details > .details {
-    @apply m-3;
-  }
-  .profile__details > .details > .details__experiences {
-    @apply m-3;
-  }
-
   /* Index page */
   .banner {
     background-image: url('../assets/images/1.webp');

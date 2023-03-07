@@ -2,10 +2,11 @@ import Image from 'next/image';
 import React from 'react';
 import { BuyButton } from '@/components/Button/BuyButton';
 import IconComponent from '@/components/Icon';
+import Link from 'next/link';
 
 const FoodCard = ({ title, featuredImageUrl, description, place }: FoodProps) => {
   return (
-    <div className='food-card'>
+    <Link className='food-card' href={'#'}>
       <div className='food-card__top'>
         <Image className='food-card__featured-image' alt='Sirloin steak' src={featuredImageUrl} />
       </div>
@@ -22,7 +23,7 @@ const FoodCard = ({ title, featuredImageUrl, description, place }: FoodProps) =>
           </BuyButton>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
