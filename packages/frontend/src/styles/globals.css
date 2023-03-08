@@ -1,4 +1,25 @@
 @import 'tailwind.css';
-.slick-slide > div {
-  margin: 1rem 1rem;
+.swiper-button-prev,.swiper-button-next{
+  background-color: rgba(249, 188, 45, 0.7);
+  border-radius: 99vw;
+  padding: 2em;
+  z-index: 2;
+  transition: all 0.5s ease;
+  transform: scale(1);
+}
+.swiper-button-prev:hover,.swiper-button-next:hover{
+  background-color: rgb(249, 188, 45,1);
+  transform: scale(1.1);
+}
+/* .swiper-button-prev:hover::after,.swiper-button-next:hover::after{
+  color: rgba(255,255,255, 1);
+} */
+.swiper-button-prev::after,.swiper-button-next::after{
+  color: rgba(255,255,255, 1);
+}
+.swiper-button-prev{
+  left: 0;
+}
+.swiper-button-next{
+  right: 0;
 }

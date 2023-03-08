@@ -1,20 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
 import logo from '@/assets/images/logo.webp';
 
 const Footer = ({ className }: FooterProps) => {
   return (
     <footer className={`${className ?? ''} footer-main`}>
-      <div className='container mx-auto'>
-        <ul className='footer-main__wrapper'>
-          <li>
-            <div className='footer-main__logo'>
+      <div className='footer-main__inner container mx-auto '>
+        <ul className='footer-main__menu'>
+          <li className='menu-item-group'>
+            <Link className='footer-main__logo' href={'/'}>
               {logo && <Image src={logo} alt='Logo' width={48} />}
               <p className='font-light'>
                 Bất cứ nơi nào, bất cứ lúc nào, tận hưởng thời gian mua sắm của bạn{' '}
               </p>
-            </div>
+            </Link>
           </li>
           <li className='menu-item-group'>
             <div className='footer-main__information'>
