@@ -45,9 +45,11 @@ const serviceList: ServiceProps[] = [
 const foodList: FoodProps[] = [
   {
     id: 1,
-    title: 'Steak',
+    title:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa similique sit commodi totam. Ab consequatur quasi, ut nulla saepe dolores? Suscipit unde quas qui accusantium accusamus doloremque esse praesentium doloribus?',
     featuredImageUrl: foodImage,
-    description: 'Mô tả',
+    description:
+      'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum sequi, doloremque mollitia, deserunt officia earum neque accusamus, vel debitis numquam quibusdam nostrum perferendis sit eius autem ullam. Sint, recusandae ullam!',
     place: 'Hồ Chí Minh',
   },
   {

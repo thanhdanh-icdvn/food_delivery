@@ -53,7 +53,7 @@ const FoodList = ({ foodList = [] }: { foodList: FoodProps[] | [] }) => {
         <Swiper {...swiperOptions} className='flex flex-col z-[1] py-20'>
           {foodList.map(food => {
             return (
-              <SwiperSlide key={food.id} className='py-10'>
+              <SwiperSlide key={food.id}>
                 <FoodCard {...food} />
               </SwiperSlide>
             );

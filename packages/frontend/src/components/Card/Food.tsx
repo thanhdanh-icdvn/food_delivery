@@ -11,7 +11,7 @@ const FoodCard = ({ title, featuredImageUrl, description, place }: FoodProps) =>
         <Image className='food-card__featured-image' alt='Sirloin steak' src={featuredImageUrl} />
       </div>
       <div className='food-card__bottom'>
-        <div>{title}</div>
+        <div className='food-card__title'>{title}</div>
         <p className='food-card__description'>{description}</p>
         <div className='food-card__location-and-buy'>
           <div className='food-card__location'>
