@@ -100,20 +100,20 @@
     background-position: left, bottom 5% left 40%, top 5% left 60%, right center;
     background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
     background-size: contain, auto, auto, auto;
-    @apply relative flex flex-row flex-wrap;
+    @apply relative flex flex-row flex-wrap gap-x-6 gap-y-6;
   }
 
   .fast-food-item {
-    @apply flex w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-3rem)] m-2 md:m-4 lg:m-6;
+    @apply flex w-full md:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)];
   }
   .fast-food-card {
     @apply relative flex flex-col items-center w-full bg-primary-100 rounded-3xl;
   }
   .fast-food-card > .fast-food-card__top {
-    @apply overflow-auto;
+    @apply overflow-hidden flex justify-center items-center p-4;
   }
   .fast-food-card > .fast-food-card__top > .fast-food-card__featured-image {
-    @apply object-cover;
+    @apply object-contain w-auto h-[200px];
   }
   .fast-food-card > .fast-food-card__bottom {
     @apply flex flex-col items-center justify-center px-6 pb-6 text-center text-tertiary;
