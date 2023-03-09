@@ -1,32 +1,39 @@
 @import 'tailwind.css';
-.swiper-button-prev,.swiper-button-next{
+.section__content .swiper-button-prev,
+.section__content .swiper-button-next {
   background-color: rgba(249, 188, 45, 0.7);
   border-radius: 99vw;
   padding: 2em;
   z-index: 2;
-  transition: all 0.5s ease;
-  transform: scale(1);
+  transform: translateY(-50%);
+  transition: background-color 0.5s ease;
 }
-.swiper-button-prev:hover,.swiper-button-next:hover{
-  background-color: rgb(249, 188, 45,1);
-  transform: scale(1.1);
+.section__content .swiper-button-prev:hover,
+.section__content .swiper-button-next:hover {
+  background-color: rgb(249, 188, 45, 1);
 }
-.swiper-button-prev::after,.swiper-button-next::after{
-  color: rgba(255,255,255, 1);
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.5s ease;
 }
-.swiper-button-prev{
+.section__content .swiper-button-prev:hover::after,
+.section__content .swiper-button-next:hover::after {
+  color: rgba(255, 255, 255, 1);
+}
+.swiper-button-prev {
   left: 0;
 }
-.swiper-button-next{
+.swiper-button-next {
   right: 0;
 }
-.section__content .swiper-pagination-bullets{
-  padding: 16px 0;
-}
-.section__content .swiper-pagination-bullet{
+.section__content .swiper-pagination-bullet {
   width: 1em;
   height: 1em;
 }
-.section__content .swiper-pagination-bullet-active{
+.section__content .swiper-pagination-bullet-active {
   background: #ffb30e;
+}
+.section__content .swiper-wrapper {
+  margin-bottom: 4.25em;
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@/components/Button';
+import { SeeMoreButton } from '@/components/Button/SeeMoreButton';
 
 const AboutUs = () => {
   return (
@@ -10,14 +10,14 @@ const AboutUs = () => {
       </div>
       <div className='section__content section__content--about-us'>
         <div className='about-us__left'>
-          <div>
+          <div className='about-us__description'>
             Chúng tôi là công ty hoạt động trong lĩnh vực dịch vụ thực phẩm với phạm vi rất rộng
             khắp Việt Nam. chúng tôi hợp tác chặt chẽ với hơn 500 nhà hàng tại Việt Nam
           </div>
           <div className='mt-[50px]'>
-            <Button className='shadow-lg shadow-primary/50' variant='primary'>
+            <SeeMoreButton variant='primary' inlineFlex className='text-white'>
               Xem thêm
-            </Button>
+            </SeeMoreButton>
           </div>
         </div>
       </div>

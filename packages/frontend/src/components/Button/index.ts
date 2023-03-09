@@ -11,7 +11,7 @@ const Button = styled.button<ButtonProps>(
     inlineFlex = false,
     wide = false,
   }: ButtonProps) => [
-    tw`transition duration-300 ease-in-out rounded-md focus:outline-none`,
+    tw`transition duration-300 ease-in-out rounded-md focus:outline-none relative justify-center items-center`,
     size === 'xs'
       ? tw`px-3 py-1.5 text-xs`
       : size === 'sm'
