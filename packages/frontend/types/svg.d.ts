@@ -8,8 +8,9 @@ declare module '*.svg?url' {
 }
 
 declare module '*.svg' {
-  const content: unknown;
-  export default content;
+  import * as React from 'react';
+  const ReactComponent: React.FunctionComponent<React.SVGProps<SVGSVGElement>>;
+  export default ReactComponent;
 }
 /**
  * StyledSVGIconProps is an object with optional className, name, color, size, transform, and alt

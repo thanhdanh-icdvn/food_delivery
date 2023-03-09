@@ -2,6 +2,7 @@ type ButtonSizeProps = 'xs' | 'sm' | 'base' | 'lg' | 'xl';
 type ButtonVariantProps =
   | 'primary'
   | 'secondary'
+  | 'tertiary'
   | 'info'
   | 'warning'
   | 'danger'
@@ -31,4 +32,6 @@ type ButtonProps = {
   full?: boolean;
   inlineFlex?: boolean;
   wide?: boolean;
+  className?: string;
+  isNoRing?: boolean;
 };

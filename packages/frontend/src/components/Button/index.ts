@@ -10,8 +10,9 @@ const Button = styled.button<ButtonProps>(
     full = false,
     inlineFlex = false,
     wide = false,
+    isNoRing = false,
   }: ButtonProps) => [
-    tw`transition duration-300 ease-in-out rounded-md focus:outline-none relative justify-center items-center`,
+    tw`transition duration-300 ease-in-out rounded-md focus:outline-none relative`,
     size === 'xs'
       ? tw`px-3 py-1.5 text-xs`
       : size === 'sm'
@@ -21,7 +22,7 @@ const Button = styled.button<ButtonProps>(
       : size === 'xl'
       ? tw`px-8 py-4 text-xl`
       : tw`px-6 py-2 text-base`,
-    inlineFlex && tw`inline-flex`,
+    inlineFlex && tw`inline-flex justify-center items-center`,
     pill === true && tw`rounded-full`,
     disabled === true && tw`cursor-not-allowed opacity-80`,
     wide && tw`px-6`,
@@ -51,6 +52,9 @@ const Button = styled.button<ButtonProps>(
       variant === 'secondary' &&
       tw`border-2 text-secondary-400 hover:text-white border-secondary-300 hover:bg-secondary-500 focus:ring-4 focus:outline-none focus:ring-secondary-300`,
     outlined == true &&
+      variant === 'tertiary' &&
+      tw`border-2 text-tertiary-300 hover:text-white border-tertiary-400 hover:bg-tertiary-600 focus:ring-4 focus:outline-none focus:ring-tertiary-300`,
+    outlined == true &&
       variant === 'primary' &&
       tw`border-2 text-primary hover:text-white border-primary hover:bg-primary focus:ring-4 focus:outline-none focus:ring-primary-200`,
     outlined === false &&
@@ -77,9 +81,17 @@ const Button = styled.button<ButtonProps>(
     outlined == false &&
       variant === 'primary' &&
       tw`text-gray-100 border bg-primary hover:text-white border-primary hover:bg-primary-600 focus:ring-4 focus:outline-none focus:ring-primary-200`,
+    variant === 'tertiary' &&
+      tw`text-gray-100 border bg-tertiary hover:text-white border-tertiary hover:bg-tertiary-600 focus:ring-4 focus:outline-none focus:ring-tertiary-200`,
     outlined == false &&
       variant === 'default' &&
       tw`text-gray-800 border border-transparent bg-default-100 hover:text-gray-800 hover:bg-default-300 focus:ring-4 focus:outline-none focus:ring-default-200`,
+    isNoRing &&
+      tw`
+      focus:ring-0
+      hover:ring-0
+      hover:ring-transparent
+    `,
   ]
 );
 
