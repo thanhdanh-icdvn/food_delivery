@@ -38,9 +38,10 @@
   margin-bottom: 4.25em;
 }
 
-.section, .inner{
+.section,
+.inner {
   @apply container mx-auto px-4 md:px-5;
 }
 .section {
-  @apply  my-[4.168vw];
+  @apply my-[4.168vw];
 }

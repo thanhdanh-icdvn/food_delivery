@@ -71,24 +71,25 @@
     @apply text-xl md:text-[22px] leading-[1.2] font-light z-[1];
   }
 
-  .banner .m-delivery-and-pickup{
+  .banner .m-delivery-and-pickup {
     @apply w-full lg:w-[42.083vw] flex flex-col bg-white  rounded-lg mt-8 z-[1] divide-y;
   }
-  .banner .m-delivery-and-pickup .tab-buttons,.banner .m-delivery-and-pickup .tab-content{
+  .banner .m-delivery-and-pickup .tab-buttons,
+  .banner .m-delivery-and-pickup .tab-content {
     @apply p-6;
   }
-  .banner .m-delivery-and-pickup .tab-buttons{
+  .banner .m-delivery-and-pickup .tab-buttons {
     @apply inline-flex flex-row gap-3 font-bold flex-wrap;
   }
-  .banner .m-delivery-and-pickup .tab-content{
+  .banner .m-delivery-and-pickup .tab-content {
     @apply flex flex-row gap-3 whitespace-pre flex-wrap;
   }
 
-  .banner .m-delivery-and-pickup .tab-content .input-icon{
+  .banner .m-delivery-and-pickup .tab-content .input-icon {
     @apply flex lg:w-[calc(66.67%-0.375rem)] w-full;
   }
 
-  .banner .m-delivery-and-pickup .tab-content .btn-find-food{
+  .banner .m-delivery-and-pickup .tab-content .btn-find-food {
     @apply flex  lg:w-[calc(33.33%-0.375rem)] w-full capitalize font-bold;
   }
   /* Common section class */
