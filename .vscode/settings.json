@@ -26,5 +26,11 @@
       "secretKey": "devSecret"
     }
   },
-  "eslint.workingDirectories": [{ "mode": "auto" }]
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true
 }

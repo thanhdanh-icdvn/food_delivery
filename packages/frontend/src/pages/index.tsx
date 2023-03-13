@@ -5,6 +5,7 @@ import img3 from '@/assets/images/safety.webp';
 import foodImage from '@/assets/images/steak.webp';
 import foodImage2 from '@/assets/images/pasta.webp';
 import foodImage3 from '@/assets/images/spagettie.webp';
+import foodDiscountImg from '@/assets/images/img01.jpg';
 
 import Banner from '@/components/Banner';
 import ContactUs from '@/components/Section/ContactUs';
@@ -13,6 +14,7 @@ import FoodList from '@/components/Section/FoodList';
 import WhyFastFood from '@/components/Section/WhyFastFood';
 import Services from '@/components/Section/Services';
 import Meta from '@/layouts/meta';
+import DiscountList from '@/components/Section/DiscountList';
 
 const serviceList: ServiceProps[] = [
   {
@@ -113,6 +115,37 @@ const fastFoodList: FastFoodProps[] = [
   },
 ];
 
+const discounts: FoodDiscountProps[] = [
+  {
+    id: 1,
+    name: 'Test',
+    discountPercentage: 20,
+    image: foodDiscountImg,
+    duration: 6,
+  },
+  {
+    id: 2,
+    name: 'Test 2',
+    discountPercentage: 25,
+    image: foodDiscountImg,
+    duration: 6,
+  },
+  {
+    id: 3,
+    name: 'Test 3',
+    discountPercentage: 15,
+    image: foodDiscountImg,
+    duration: 6,
+  },
+  {
+    id: 4,
+    name: 'Test 4',
+    discountPercentage: 10,
+    image: foodDiscountImg,
+    duration: 6,
+  },
+];
+
 export default function Home() {
   return (
     <>
@@ -122,6 +155,7 @@ export default function Home() {
         description='Homepage of Food Delivery App'
       />
       <Banner />
+      <DiscountList data={discounts} />
       <WhyFastFood fastFoodList={fastFoodList} />
       <FoodList foodList={foodList} />
       <Services serviceList={serviceList} />

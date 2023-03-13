@@ -10,8 +10,10 @@ const Banner = () => {
   return (
     <section id='banner' className='banner'>
       <div className='banner__content inner'>
-        <h1 className='banner__heading'>Are you starving?</h1>
-        <p className='banner__description'>Bạn có thể đặt hàng tại đây rất dễ dàng và đơn giản</p>
+        <div className='banner__title'>
+          <h1 className='banner__heading'>Are you starving?</h1>
+          <p className='banner__description'>Bạn có thể đặt hàng tại đây rất dễ dàng và đơn giản</p>
+        </div>
         <div className='m-delivery-and-pickup'>
           <div className='tab-buttons'>
             <OrangeLightButton isActive={active === 0} onClick={() => setActive(0)}>
