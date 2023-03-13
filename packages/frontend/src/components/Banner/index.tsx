@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import IconMap from '@/assets/icon/icon_map.svg';
 import IconMotorbike from '@/assets/icon/icon_moto.svg';
 import IconPickup from '@/assets/icon/icon_pickup.svg';
 import IconSearch from '@/assets/icon/icon_search.svg';
 import Button from '@/components/Button';
+import OrangeLightButton from '@/components/Button/OrangeLightButton';
 const Banner = () => {
+  const [active, setActive] = useState<number>(0);
   return (
     <section id='banner' className='banner'>
       <div className='banner__content inner'>
@@ -12,14 +14,14 @@ const Banner = () => {
         <p className='banner__description'>Bạn có thể đặt hàng tại đây rất dễ dàng và đơn giản</p>
         <div className='m-delivery-and-pickup'>
           <div className='tab-buttons'>
-            <Button inlineFlex variant='tertiary' size='sm'>
+            <OrangeLightButton isActive={active === 0} onClick={() => setActive(0)}>
               <IconMotorbike className='inline-flex flex-shrink-0 w-6 h-6 mx-1' />
               Delivery
-            </Button>
-            <Button inlineFlex size='sm'>
+            </OrangeLightButton>
+            <OrangeLightButton isActive={active === 1} onClick={() => setActive(1)}>
               <IconPickup className='inline-flex flex-shrink-0 mx-1' />
               Pickup
-            </Button>
+            </OrangeLightButton>
           </div>
           <form action='' method='post' className='tab-content'>
             <div
