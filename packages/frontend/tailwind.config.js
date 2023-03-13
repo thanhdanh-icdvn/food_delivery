@@ -168,6 +168,10 @@ module.exports = {
       borderRadius: {
         15: '15px',
       },
+      backgroundImage: {
+        banner: 'url(../assets/images/bg_banner@2x.png)',
+        bannerContent: 'url(../assets/images/bg_banner_bowl.png)',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography'), require('@tailwindcss/line-clamp')],

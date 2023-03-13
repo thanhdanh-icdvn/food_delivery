@@ -17,11 +17,11 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
   const { data: session } = useSession();
   return (
     <header className={`${className ?? ''}`}>
-      <div className='header-wrapper'>
-        <Link className='header--left' href={'/'}>
+      <div className='header-main__wrapper'>
+        <Link className='header-main__left' href={'/'}>
           {logo && <Image src={logo} alt='Logo' width={48} height={48} />}
         </Link>
-        <div className='header--right'>
+        <div className='header-main__right'>
           <ul className='flex-row flex-wrap items-center justify-end hidden gap-4 lg:inline-flex'>
             <li>
               <Link href={'#banner'} scroll>

@@ -10,7 +10,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 const Maps: React.FunctionComponent = () => {
   return (
-    <section id='maps'>
+    <section id='maps' className='section'>
       <Map
         initialViewState={{
           longitude: 106.7004238,

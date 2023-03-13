@@ -37,3 +37,10 @@
 .section__content .swiper-wrapper {
   margin-bottom: 4.25em;
 }
+
+.section, .inner{
+  @apply container mx-auto px-4 md:px-5;
+}
+.section {
+  @apply  my-[4.168vw];
+}

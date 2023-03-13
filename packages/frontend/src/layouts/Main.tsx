@@ -15,9 +15,7 @@ const MainLayout = ({ children }: LayoutProps): React.ReactNode => {
     <>
       <Header className={'header-main sticky top-0'} handleToggleDrawer={handleToggleShow} />
       <main className={'main'}>
-        <div className='main__inner'>
-          <div className='content'>{children}</div>
-        </div>
+        <div className='content'>{children}</div>
         <Drawer isShow={isShow} toggleShow={handleToggleShow} />
       </main>
       <Footer className={'footer-main'} />

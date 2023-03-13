@@ -1,27 +1,27 @@
 import React from 'react';
 import IconMap from '@/assets/icon/icon_map.svg';
 import IconMotorbike from '@/assets/icon/icon_moto.svg';
+import IconPickup from '@/assets/icon/icon_pickup.svg';
+import IconSearch from '@/assets/icon/icon_search.svg';
 import Button from '@/components/Button';
 const Banner = () => {
   return (
     <section id='banner' className='banner'>
-      <div className='banner__content'>
-        <h1 className='banner__heading'>
-          Bạn có <span className='text-primary'>đói ?</span>
-        </h1>
+      <div className='banner__content inner'>
+        <h1 className='banner__heading'>Are you starving?</h1>
         <p className='banner__description'>Bạn có thể đặt hàng tại đây rất dễ dàng và đơn giản</p>
-        <div className='m-delivery-and-pickup w-full'>
+        <div className='m-delivery-and-pickup'>
           <div className='tab-buttons'>
-            <Button inlineFlex variant='tertiary'>
-              <IconMotorbike className='inline-block w-6 h-6 mx-1' />
+            <Button inlineFlex variant='tertiary' size='sm'>
+              <IconMotorbike className='inline-flex flex-shrink-0 w-6 h-6 mx-1' />
               Delivery
             </Button>
-            <Button inlineFlex>
-              <IconMotorbike className='inline-block w-6 h-6 mx-1' />
-              Find your favourite food
+            <Button inlineFlex size='sm'>
+              <IconPickup className='inline-flex flex-shrink-0 mx-1' />
+              Pickup
             </Button>
           </div>
-          <div className='tab-content flex w-full'>
+          <form action='' method='post' className='tab-content'>
             <div
               className='
                 input-icon 
@@ -33,10 +33,9 @@ const Banner = () => {
                 outline-none
                 rounded-md
                 text-lg
-                w-[calc(2/3-0.5rem)]
               '
             >
-              <IconMap className='h-6 w-6 text-[#ff7474] inline-block bg-transparent mx-2' />
+              <IconMap className='h-6 w-6 text-[#ff7474] inline-flex flex-shrink-0 bg-transparent mx-2' />
               <input
                 className='
                   relative
@@ -49,6 +48,7 @@ const Banner = () => {
                   focus:border-transparent
                   focus:bg-transparent
                   w-full
+                  font-light
                 '
                 type='text'
                 name='inp-delivery'
@@ -57,13 +57,14 @@ const Banner = () => {
                 onChange={() => {
                   return;
                 }}
+                placeholder='Enter your address'
               />
             </div>
-            <Button inlineFlex variant='tertiary' className='w-[1/3-0.5rem)'>
-              <IconMotorbike className='inline-block w-6 h-6 mx-1' />
-              Find your favourite food
+            <Button inlineFlex variant='tertiary' className='btn-find-food'>
+              <IconSearch className='inline-flex mx-1 flex-shrink-0' />
+              Find food
             </Button>
-          </div>
+          </form>
         </div>
       </div>
     </section>
