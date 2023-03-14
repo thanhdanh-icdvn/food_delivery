@@ -25,7 +25,7 @@ const Banner = () => {
               Pickup
             </OrangeLightButton>
           </div>
-          <form action='' method='post' className='tab-content'>
+          <form className='tab-content'>
             <div
               className='
                 input-icon 
