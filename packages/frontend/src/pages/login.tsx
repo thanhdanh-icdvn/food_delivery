@@ -1,10 +1,10 @@
-import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { layouts } from './_app';
+
+import lotus from '@/assets/images/lotus.webp';
 import Button from '@/components/Button';
 import Meta from '@/layouts/meta';
-import lotus from '@/assets/images/lotus.webp';
+import { layouts } from './_app';
 
 const Login = (): PageProps => {
   return (

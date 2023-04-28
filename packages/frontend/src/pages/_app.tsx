@@ -1,14 +1,14 @@
-import React from 'react';
-import type { AppProps } from 'next/app';
-import { CacheProvider } from '@emotion/react';
-import { cache } from '@emotion/css';
-import '@/styles/globals.css';
-import GlobalStyles from '@/styles/GlobalStyles';
 import MainLayout from '@/layouts/Main';
-import MainLayoutWithSidebar from '@/layouts/MainWithSideBar';
 import MainNoHeaderNoFooter from '@/layouts/MainNoHeaderNoFooter';
+import MainLayoutWithSidebar from '@/layouts/MainWithSideBar';
+import GlobalStyles from '@/styles/GlobalStyles';
+import '@/styles/globals.css';
+import { cache } from '@emotion/css';
+import { CacheProvider } from '@emotion/react';
 import { Analytics } from '@vercel/analytics/react';
 import { SessionProvider } from 'next-auth/react';
+import type { AppProps } from 'next/app';
+import React from 'react';
 
 export const layouts = {
   Main: MainLayout,

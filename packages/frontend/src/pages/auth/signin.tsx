@@ -2,10 +2,11 @@ import type {
   GetServerSidePropsContext,
   InferGetServerSidePropsType,
 } from 'next';
-import { getProviders, signIn } from 'next-auth/react';
 import { getServerSession } from 'next-auth/next';
-import { authOptions } from '../api/auth/[...nextauth]';
+import { getProviders, signIn } from 'next-auth/react';
+
 import Meta from '@/layouts/meta';
+import { authOptions } from '../api/auth/[...nextauth]';
 
 export default function SignIn({
   providers,

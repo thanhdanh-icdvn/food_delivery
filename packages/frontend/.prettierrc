@@ -8,5 +8,6 @@
   "jsxSingleQuote": true,
   "tabWidth": 2,
   "quoteProps": "as-needed",
-  "useTabs": false
+  "useTabs": false,
+  "endOfLine": "auto"
 }

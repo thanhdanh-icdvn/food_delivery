@@ -1,5 +1,4 @@
 import Meta from '@/layouts/meta';
-import React from 'react';
 
 const Payment = () => {
   return (

@@ -1,7 +1,6 @@
-import React from 'react';
-import { Global } from '@emotion/react';
-import tw, { css, GlobalStyles as BaseStyles } from 'twin.macro';
 import { roboto } from '@/layouts/font';
+import { Global } from '@emotion/react';
+import tw, { GlobalStyles as BaseStyles, css } from 'twin.macro';
 const customStyles = css({
   body: {
     fontFamily: roboto.style.fontFamily,

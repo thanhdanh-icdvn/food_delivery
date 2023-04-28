@@ -1,20 +1,19 @@
-import React from 'react';
 import img1 from '@/assets/images/easy.webp';
 import img2 from '@/assets/images/fast.webp';
-import img3 from '@/assets/images/safety.webp';
-import foodImage from '@/assets/images/steak.webp';
-import foodImage2 from '@/assets/images/pasta.webp';
-import foodImage3 from '@/assets/images/spagettie.webp';
 import foodDiscountImg from '@/assets/images/img01.jpg';
+import foodImage2 from '@/assets/images/pasta.webp';
+import img3 from '@/assets/images/safety.webp';
+import foodImage3 from '@/assets/images/spagettie.webp';
+import foodImage from '@/assets/images/steak.webp';
 
 import Banner from '@/components/Banner';
-import ContactUs from '@/components/Section/ContactUs';
 import AboutUs from '@/components/Section/AboutUs';
-import FoodList from '@/components/Section/FoodList';
-import WhyFastFood from '@/components/Section/WhyFastFood';
-import Services from '@/components/Section/Services';
-import Meta from '@/layouts/meta';
+import ContactUs from '@/components/Section/ContactUs';
 import DiscountList from '@/components/Section/DiscountList';
+import FoodList from '@/components/Section/FoodList';
+import Services from '@/components/Section/Services';
+import WhyFastFood from '@/components/Section/WhyFastFood';
+import Meta from '@/layouts/meta';
 
 const serviceList: ServiceProps[] = [
   {

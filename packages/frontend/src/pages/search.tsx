@@ -1,5 +1,4 @@
 import Meta from '@/layouts/meta';
-import React from 'react';
 import { layouts } from './_app';
 
 const Search = () => {

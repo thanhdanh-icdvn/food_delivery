@@ -1,4 +1,3 @@
-import React from 'react';
 import Card from '@/components/Card';
 import Meta from '@/layouts/meta';
 
@@ -12,7 +11,7 @@ const Profile = () => {
       />
       <div className='profile'>
         <div className='profile__summary'>
-          <Card className='w-full flex flex-col'>
+          <Card className='flex flex-col w-full'>
             <div className='summary__title'>Jane Doe</div>
             <div className='summary__sub-title'>Owner at Her Company Inc.</div>
             <div className='summary__description'>

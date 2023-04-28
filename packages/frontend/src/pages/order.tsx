@@ -1,8 +1,8 @@
-import React from 'react';
 import Image from 'next/image';
-import IconComponent from '@/components/Icon';
-import Button from '@/components/Button';
+
 import foodImage from '@/assets/images/steak.webp';
+import Button from '@/components/Button';
+import IconComponent from '@/components/Icon';
 import Meta from '@/layouts/meta';
 const Order = () => {
   return (
@@ -19,7 +19,7 @@ const Order = () => {
             {Array.from(Array(8).keys()).map((orderItem, index) => {
               return (
                 <li className='order-item__wrapper' key={index}>
-                  <div className='order-item flex flex-row'>
+                  <div className='flex flex-row order-item'>
                     <div className='order-item__left'>
                       <Image
                         className='order-item__featured-image'
@@ -71,7 +71,7 @@ const Order = () => {
           <div className='flex flex-col'>
             <div className='fee-and-delivery'>
               <div>Delivery</div>
-              <div className='fee-block flex flex-row justify-between'>
+              <div className='flex flex-row justify-between fee-block'>
                 <div className='fee__title'>Free </div>
                 <div className='fee__price'>123</div>
               </div>
@@ -102,7 +102,7 @@ const Order = () => {
                 <div className='discount__label'>Discount</div>
                 <div className='discount__value'>(20%) - $16.19</div>
               </div>
-              <div className='sub-total__tax flex'>
+              <div className='flex sub-total__tax'>
                 <div className='tax__label'>Tax</div>
                 <div className='tax__value'>+$14.00</div>
               </div>
