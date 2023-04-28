@@ -15,7 +15,9 @@ type NewDocumentInitialProps = DocumentInitialProps & {
 };
 
 class CustomDocument extends Document<NewDocumentInitialProps> {
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
     const initialProps = await Document.getInitialProps(ctx);
     const critical = extractCritical(initialProps.html);
     initialProps.html = critical.html;

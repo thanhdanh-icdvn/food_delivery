@@ -13,7 +13,10 @@ const MainLayoutWithSidebar = ({ children }: LayoutProps): React.ReactNode => {
   useEffect(() => setIsShow(false), []);
   return (
     <>
-      <Header className={'header-main sticky top-0 '} handleToggleDrawer={handleToggleShow} />
+      <Header
+        className={'header-main sticky top-0 '}
+        handleToggleDrawer={handleToggleShow}
+      />
       <main className='main'>
         <SideBar className='sidebar' />
         <div className='content has-sidebar'>{children}</div>{' '}

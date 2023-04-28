@@ -1,4 +1,16 @@
 {
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true,
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[typescript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "tailwindCSS.experimental.classRegex": [
     "tw`([^`]*)", // tw`...`
     "tw=\"([^\"]*)", // <div tw="..." />
@@ -30,7 +42,5 @@
     {
       "mode": "auto"
     }
-  ],
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true
+  ]
 }

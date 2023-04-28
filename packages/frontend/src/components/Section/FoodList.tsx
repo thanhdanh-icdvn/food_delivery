@@ -1,5 +1,13 @@
 import React from 'react';
-import { SwiperOptions, Navigation, Pagination, Scrollbar, A11y, Autoplay, Lazy } from 'swiper';
+import {
+  SwiperOptions,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+  Autoplay,
+  Lazy,
+} from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -60,7 +68,10 @@ const FoodList = ({ foodList = [] }: { foodList: FoodProps[] | [] }) => {
           })}
         </Swiper>
         <div className='text-center'>
-          <Button className='food__food-more shadow-lg shadow-primary/50' variant='primary'>
+          <Button
+            className='food__food-more shadow-lg shadow-primary/50'
+            variant='primary'
+          >
             Nhiều món hơn
           </Button>
         </div>

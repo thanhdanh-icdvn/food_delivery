@@ -2,7 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const FastFoodCard = ({ imgUrl, imgAlt = '', title, description }: FastFoodProps) => {
+const FastFoodCard = ({
+  imgUrl,
+  imgAlt = '',
+  title,
+  description,
+}: FastFoodProps) => {
   return (
     <Link className='fast-food-card' href={'#'}>
       <div className='fast-food-card__top'>
@@ -12,6 +17,7 @@ const FastFoodCard = ({ imgUrl, imgAlt = '', title, description }: FastFoodProps
           alt={imgAlt}
           width={300}
           height={300}
+          loading='lazy'
         />
       </div>
       <div className='fast-food-card__bottom'>

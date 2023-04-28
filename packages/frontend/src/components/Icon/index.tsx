@@ -48,7 +48,12 @@ const IconTypes: any = {
   chevronRight: ChevronRight,
   trash: Trash,
 };
-const IconComponent = ({ name, width = '1em', height = '1em', ...otherProps }: IconProps) => {
+const IconComponent = ({
+  name,
+  width = '1em',
+  height = '1em',
+  ...otherProps
+}: IconProps) => {
   const Icon = IconTypes[name];
   if (Icon) {
     return <Icon width={width} height={height} {...otherProps} />;

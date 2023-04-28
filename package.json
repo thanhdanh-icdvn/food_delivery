@@ -58,7 +58,6 @@
     "db:export": "pg_dump -U food_delivery_admin food_delivery > food_delivery.pgsql",
     "prepare": "husky install"
   },
-  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
     "@commitlint/config-conventional": "^17.4.2",

@@ -13,7 +13,10 @@ const MainLayout = ({ children }: LayoutProps): React.ReactNode => {
   useEffect(() => setIsShow(false), []);
   return (
     <>
-      <Header className={'header-main sticky top-0'} handleToggleDrawer={handleToggleShow} />
+      <Header
+        className={'header-main sticky top-0'}
+        handleToggleDrawer={handleToggleShow}
+      />
       <main className={'main'}>
         <div className='content'>{children}</div>
         <Drawer isShow={isShow} toggleShow={handleToggleShow} />

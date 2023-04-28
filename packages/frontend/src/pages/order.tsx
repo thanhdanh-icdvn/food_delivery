@@ -43,11 +43,19 @@ const Order = () => {
                         <div className='order-item__quantity'>2</div>
                         <div className='order-item__action'>
                           <div className='order-item__add-favourite'>
-                            <IconComponent name='heart' fill='none' stroke='red' />
+                            <IconComponent
+                              name='heart'
+                              fill='none'
+                              stroke='red'
+                            />
                             <div>Save</div>
                           </div>
                           <div className='order-item__delete'>
-                            <IconComponent name='trash' fill='none' stroke='red' />
+                            <IconComponent
+                              name='trash'
+                              fill='none'
+                              stroke='red'
+                            />
                             <div>Delete</div>
                           </div>
                         </div>
@@ -71,8 +79,15 @@ const Order = () => {
             </div>
             <div className='order__promotion'>
               <div className='order__promotion-input-group'>
-                <input className='promotion__input' placeholder='Enter promotion code' />
-                <Button className='promotion__button !rounded-l-none' size='sm' variant='primary'>
+                <input
+                  className='promotion__input'
+                  placeholder='Enter promotion code'
+                />
+                <Button
+                  className='promotion__button !rounded-l-none'
+                  size='sm'
+                  variant='primary'
+                >
                   Apply
                 </Button>
               </div>

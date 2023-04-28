@@ -1,6 +1,10 @@
 import React from 'react';
 import FastFoodCard from '@/components/Card/FastFood';
-const WhyFastFood = ({ fastFoodList = [] }: { fastFoodList: FastFoodProps[] | [] }) => {
+const WhyFastFood = ({
+  fastFoodList = [],
+}: {
+  fastFoodList: FastFoodProps[] | [];
+}) => {
   return (
     <section id='why-fast-food' className='section why-fast-food'>
       <div className='section__heading'>

@@ -11,7 +11,8 @@ const Footer = ({ className }: FooterProps) => {
               <Link className='footer-main__logo' href={'/'}>
                 {logo && <Image src={logo} alt='Logo' width={48} />}
                 <p className='font-light'>
-                  Bất cứ nơi nào, bất cứ lúc nào, tận hưởng thời gian mua sắm của bạn{' '}
+                  Bất cứ nơi nào, bất cứ lúc nào, tận hưởng thời gian mua sắm
+                  của bạn{' '}
                 </p>
               </Link>
             </li>
@@ -52,7 +53,9 @@ const Footer = ({ className }: FooterProps) => {
             </li>
             <li className='menu-item-group'>
               <div className='footer-main__our-menu'>
-                <h3 className='menu-item-group__title'>Liên kết của chúng tôi</h3>
+                <h3 className='menu-item-group__title'>
+                  Liên kết của chúng tôi
+                </h3>
                 <ul className='menu-item-list'>
                   <li className='menu-item'>
                     <Link href={'#'}>Tài xế</Link>

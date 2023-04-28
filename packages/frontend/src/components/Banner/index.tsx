@@ -12,16 +12,24 @@ const Banner = () => {
       <div className='banner__content inner'>
         <div className='banner__title'>
           <h1 className='banner__heading'>Are you starving?</h1>
-          <p className='banner__description'>Bạn có thể đặt hàng tại đây rất dễ dàng và đơn giản</p>
+          <p className='banner__description'>
+            Bạn có thể đặt hàng tại đây rất dễ dàng và đơn giản
+          </p>
         </div>
         <div className='m-delivery-and-pickup'>
           <div className='tab-buttons'>
-            <OrangeLightButton isActive={active === 0} onClick={() => setActive(0)}>
-              <IconMotorbike className='inline-flex flex-shrink-0 w-6 h-6 mx-1' />
+            <OrangeLightButton
+              isActive={active === 0}
+              onClick={() => setActive(0)}
+            >
+              <IconMotorbike className='inline-flex flex-shrink-0 w-[6] h-[6] mx-1' />
               Delivery
             </OrangeLightButton>
-            <OrangeLightButton isActive={active === 1} onClick={() => setActive(1)}>
-              <IconPickup className='inline-flex flex-shrink-0 mx-1' />
+            <OrangeLightButton
+              isActive={active === 1}
+              onClick={() => setActive(1)}
+            >
+              <IconPickup className='inline-flex flex-shrink-0 w-[6] h-[6] mx-1' />
               Pickup
             </OrangeLightButton>
           </div>
@@ -65,7 +73,7 @@ const Banner = () => {
               />
             </div>
             <Button inlineFlex variant='tertiary' className='btn-find-food'>
-              <IconSearch className='inline-flex mx-1 flex-shrink-0' />
+              <IconSearch className='inline-flex flex-shrink-0 mx-1' />
               Find food
             </Button>
           </form>

@@ -6,11 +6,15 @@ import logo from '@/assets/images/logo.webp';
 import { signIn, signOut, useSession } from 'next-auth/react';
 
 const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
-  const handleSignin = (e: React.MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
+  const handleSignin = (
+    e: React.MouseEvent<HTMLButtonElement, globalThis.MouseEvent>
+  ) => {
     e.preventDefault();
     signIn('google');
   };
-  const handleSignout = (e: React.MouseEvent<HTMLButtonElement, globalThis.MouseEvent>) => {
+  const handleSignout = (
+    e: React.MouseEvent<HTMLButtonElement, globalThis.MouseEvent>
+  ) => {
     e.preventDefault();
     signOut();
   };

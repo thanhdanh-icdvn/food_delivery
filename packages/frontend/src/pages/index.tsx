@@ -28,7 +28,8 @@ const serviceList: ServiceProps[] = [
     id: 2,
     iconName: 'delivery',
     title: 'Vận chuyển',
-    description: 'Giao hàng nhanh chóng và an toàn từ chúng tôi với lời giới thiệu đáng tin cậy',
+    description:
+      'Giao hàng nhanh chóng và an toàn từ chúng tôi với lời giới thiệu đáng tin cậy',
   },
   {
     id: 3,
@@ -97,14 +98,16 @@ const fastFoodList: FastFoodProps[] = [
     imgUrl: img1,
     imgAlt: 'FF là dễ dàng',
     title: 'Dễ dàng',
-    description: 'Chỉ với điện thoại thông minh của bạn, bạn đã có thể nhận được thực phẩm',
+    description:
+      'Chỉ với điện thoại thông minh của bạn, bạn đã có thể nhận được thực phẩm',
   },
   {
     id: 2,
     imgUrl: img2,
     imgAlt: 'FF là Nhanh',
     title: 'Nhanh',
-    description: 'Chúng tôi có thể vận chuyển thực phẩm đến bạn một cách nhanh chóng',
+    description:
+      'Chúng tôi có thể vận chuyển thực phẩm đến bạn một cách nhanh chóng',
   },
   {
     id: 3,

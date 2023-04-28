@@ -61,8 +61,15 @@ const Login = (): PageProps => {
                           </Link>
                         </div>
                         <div className='flex items-center justify-between pb-6'>
-                          <p className='mb-0 mr-2'>Don&apos;t have an account?</p>
-                          <Button type='button' variant='primary' outlined size='sm'>
+                          <p className='mb-0 mr-2'>
+                            Don&apos;t have an account?
+                          </p>
+                          <Button
+                            type='button'
+                            variant='primary'
+                            outlined
+                            size='sm'
+                          >
                             Register
                           </Button>
                         </div>
@@ -72,7 +79,8 @@ const Login = (): PageProps => {
                   <div
                     className='flex items-center rounded-b-lg lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none'
                     style={{
-                      background: 'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
+                      background:
+                        'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
                     }}
                   >
                     <div className='px-4 py-6 text-white md:p-12 md:mx-6'>
@@ -80,10 +88,11 @@ const Login = (): PageProps => {
                         We are more than just a company
                       </h4>
                       <p className='text-sm'>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                        consequat.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex
+                        ea commodo consequat.
                       </p>
                     </div>
                   </div>

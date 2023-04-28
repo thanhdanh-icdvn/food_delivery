@@ -16,8 +16,9 @@ const Profile = () => {
             <div className='summary__title'>Jane Doe</div>
             <div className='summary__sub-title'>Owner at Her Company Inc.</div>
             <div className='summary__description'>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, eligendi
-              dolorum sequi illum qui unde aspernatur non deserunt
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reprehenderit, eligendi dolorum sequi illum qui unde aspernatur
+              non deserunt
             </div>
           </Card>
         </div>
