@@ -76,13 +76,7 @@ const Login = (): PageProps => {
                       </form>
                     </div>
                   </div>
-                  <div
-                    className='flex items-center rounded-b-lg lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none'
-                    style={{
-                      background:
-                        'linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593)',
-                    }}
-                  >
+                  <div className='flex items-center rounded-b-lg lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none bg-login'>
                     <div className='px-4 py-6 text-white md:p-12 md:mx-6'>
                       <h4 className='mb-6 text-xl font-semibold'>
                         We are more than just a company

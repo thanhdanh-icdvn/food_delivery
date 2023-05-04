@@ -171,6 +171,8 @@ module.exports = {
       backgroundImage: {
         banner: 'url(../assets/images/bg_banner@2x.png)',
         bannerContent: 'url(../assets/images/bg_banner_bowl.png)',
+        login:
+          'linear-gradient(-45deg, rgba(255,179,14,1) 25%, rgba(255,111,0,1) 100%)',
       },
     },
   },

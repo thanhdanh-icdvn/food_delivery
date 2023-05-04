@@ -65,13 +65,13 @@
     after:absolute after:bg-bannerContent after:bg-no-repeat after:bg-right-bottom after:bg-contain after:w-full after:z-[0] after:h-[497px] after:right-0 after:bottom-0;
   }
   .banner > .banner__content > .banner__title {
-    @apply z-[1] py-6;
+    @apply z-[1] py-6 text-slate-50 flex flex-col;
   }
   .banner > .banner__content > .banner__title > .banner__heading {
-    @apply font-black text-[56px] leading-[1.25] md:text-[75px] md:leading-[1] text-white z-[1];
+    @apply font-black text-[56px] leading-[1.25] md:text-[75px] md:leading-[1] z-[1];
   }
   .banner > .banner__content > .banner__title > .banner__description {
-    @apply text-xl md:text-[22px] leading-[1.2] font-light z-[1] text-dark-100;
+    @apply text-xl md:text-[22px] leading-[1.2] font-light z-[1];
   }
 
   .banner .m-delivery-and-pickup {

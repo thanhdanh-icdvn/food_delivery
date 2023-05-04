@@ -5,7 +5,7 @@ const Footer = ({ className }: FooterProps) => {
   return (
     <>
       <footer className={`${className ?? ''} footer-main`}>
-        <div className='footer-main__inner container mx-auto '>
+        <div className='container mx-auto footer-main__inner '>
           <ul className='footer-main__menu'>
             <li className='menu-item-group'>
               <Link className='footer-main__logo' href={'/'}>
@@ -87,7 +87,7 @@ const Footer = ({ className }: FooterProps) => {
             </div>
             <div className='footer-main__reserved'>
               <div>
-                <span> &#169;</span> FF Creative đã đăng ký bản quyền{' '}
+                <span>&copy;</span> FF Creative đã đăng ký bản quyền{' '}
                 <span className='year'>{new Date().getFullYear()}</span>
               </div>
             </div>
