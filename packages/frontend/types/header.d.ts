@@ -8,4 +8,6 @@
 type HeaderProps = {
   className?: string;
   handleToggleDrawer: () => void;
+  open?: boolean;
+  cycleOpen?: () => void;
 };

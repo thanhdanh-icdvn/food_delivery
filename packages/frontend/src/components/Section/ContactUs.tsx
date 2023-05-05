@@ -1,7 +1,44 @@
 import React from 'react';
 import Button from '@/components/Button';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { object, string } from 'yup';
+import clsx from 'clsx';
 
+const contactSchema = object({
+  firstName: string().required('Họ là trường bắt buộc'),
+  lastName: string().required('Tên đệm là trường bắt buộc'),
+  email: string()
+    .required('Email là trường bắt buộc')
+    .email('Định dạng email không hợp lệ'),
+  message: string().required('Lời nhắn là trường bắt buộc'),
+}).required();
+
+type ContactFormData = {
+  firstName: string;
+  lastName: string;
+  email: string;
+  message: string;
+};
 const ContactUs = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<ContactFormData>({
+    resolver: yupResolver(contactSchema),
+    defaultValues: {
+      firstName: '',
+      lastName: '',
+      email: '',
+      message: '',
+    },
+  });
+
+  const onSubmit = (data: ContactFormData) =>
+    console.log({
+      data,
+    });
   return (
     <section id='contact-us' className='section'>
       <div className='section__heading'>
@@ -18,45 +55,86 @@ const ContactUs = () => {
           </p>
         </div>
         <div className='contact-us__right'>
-          <form id='contact-us__form' className='contact-us__form'>
-            <div className='input-field w-full'>
-              <label htmlFor='name' className='uppercase'>
-                Tên
-              </label>
-              <input
-                type='text'
-                id='name'
-                name='name'
-                placeholder='Tên của bạn'
-                className='input'
-              />
+          <form
+            id='contact-us__form'
+            className='contact-us__form'
+            onSubmit={handleSubmit(onSubmit)}
+            noValidate
+          >
+            <div className='input-wrap'>
+              <div className='w-full input-field'>
+                <label htmlFor='name' className='uppercase'>
+                  Họ
+                </label>
+                <input
+                  type='text'
+                  id='firstName'
+                  placeholder='Họ'
+                  className='input'
+                  {...register('firstName')}
+                />
+              </div>
+              <p className='text-sm font-light text-danger'>
+                {errors.firstName?.message}
+              </p>
             </div>
-            <div className='input-field w-full'>
-              <label htmlFor='email' className='uppercase'>
-                Thư điện tử
-              </label>
-              <input
-                type='email'
-                id='email'
-                name='email'
-                placeholder='example@yourdomain'
-                className='input'
-              />
+            <div className='input-wrap'>
+              <div className='w-full input-field'>
+                <label htmlFor='name' className='uppercase'>
+                  Tên
+                </label>
+                <input
+                  type='text'
+                  id='lastName'
+                  placeholder='Tên đệm'
+                  className='input'
+                  {...register('lastName')}
+                />
+              </div>
+              <p className='text-sm font-light text-danger'>
+                {errors.lastName?.message}
+              </p>
             </div>
-            <div className='input-field w-full'>
-              <label htmlFor='message' className='uppercase'>
-                Lời nhắn
-              </label>
-              <input
-                type='text'
-                id='message'
-                name='message'
-                placeholder='Xin chào...'
-                className='input'
-              />
+            <div className='input-wrap'>
+              <div className='w-full input-field'>
+                <label htmlFor='email' className='uppercase'>
+                  Thư điện tử
+                </label>
+                <input
+                  type='email'
+                  id='email'
+                  placeholder='example@yourdomain'
+                  className='input'
+                  {...register('email')}
+                />
+              </div>
+              <p className='text-sm font-light text-danger'>
+                {errors.email?.message}
+              </p>
             </div>
-            <div className='px-4'>
-              <Button className='shadow-lg shadow-primary/50' variant='primary'>
+            <div className='input-wrap'>
+              <div className='w-full input-field'>
+                <label htmlFor='message' className='uppercase'>
+                  Lời nhắn
+                </label>
+                <input
+                  type='text'
+                  id='message'
+                  placeholder='Xin chào...'
+                  className='input'
+                  {...register('message')}
+                />
+              </div>
+              <p className='text-sm font-light text-danger'>
+                {errors.message?.message}
+              </p>
+            </div>
+            <div>
+              <Button
+                className={clsx('shadow-lg shadow-primary/50 block')}
+                variant='primary'
+                type='submit'
+              >
                 Gửi đi
               </Button>
             </div>

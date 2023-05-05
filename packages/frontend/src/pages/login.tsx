@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import lotus from '@/assets/images/lotus.webp';
+import logo from '@/assets/images/logo.webp';
 import Button from '@/components/Button';
 import Meta from '@/layouts/meta';
 import { layouts } from './_app';
@@ -20,15 +20,14 @@ const Login = (): PageProps => {
             <div className=''>
               <div className='block bg-white rounded-lg shadow-mat-3'>
                 <div className='lg:flex lg:flex-wrap g-0'>
-                  <div className='px-4 lg:w-6/12 md:px-0'>
-                    <div className='md:p-12 md:mx-6'>
-                      <div className='text-center'>
+                  <div className='w-full px-4 lg:w-1/2 lg:px-0'>
+                    <div className='md:p-12 lg:mx-6'>
+                      <div className='relative text-center'>
                         <Image
                           className='w-48 mx-auto'
-                          src={lotus}
+                          src={logo}
                           alt='logo'
-                          width={500}
-                          height={500}
+                          loading='lazy'
                         />
                         <h4 className='pb-1 mt-1 mb-12 text-xl font-semibold'>
                           We are The Lotus Team
@@ -76,8 +75,8 @@ const Login = (): PageProps => {
                       </form>
                     </div>
                   </div>
-                  <div className='flex items-center bg-center bg-no-repeat bg-contain rounded-b-lg bg-login lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none'>
-                    <div className='px-4 py-6 text-base md:p-12 md:mx-6'>
+                  <div className='items-end hidden bg-center bg-no-repeat bg-contain rounded-b-lg lg:flex bg-1/2 bg-login lg:w-6/12 lg:rounded-r-lg lg:rounded-bl-none'>
+                    <div className='px-4 py-6 text-secondary-900 md:p-12 backdrop-blur-sm'>
                       <h4 className='mb-6 text-xl font-semibold'>
                         We are more than just a company
                       </h4>

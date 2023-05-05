@@ -17,7 +17,7 @@ import Button from '@/components/Button';
 import FoodCard from '@/components/Card/Food';
 const swiperOptions: SwiperOptions = {
   observer: true,
-  slidesPerView: 3,
+  slidesPerView: 'auto',
   spaceBetween: 30,
   autoplay: true,
   speed: 2000,
@@ -69,7 +69,7 @@ const FoodList = ({ foodList = [] }: { foodList: FoodProps[] | [] }) => {
         </Swiper>
         <div className='text-center'>
           <Button
-            className='food__food-more shadow-lg shadow-primary/50'
+            className='shadow-lg food__food-more shadow-primary/50'
             variant='primary'
           >
             Nhiều món hơn

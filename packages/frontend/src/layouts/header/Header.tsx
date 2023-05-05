@@ -4,8 +4,14 @@ import Link from 'next/link';
 import IconComponent from '@/components/Icon';
 import logo from '@/assets/images/logo.webp';
 import { signIn, signOut, useSession } from 'next-auth/react';
+import ScrollLink from '@/components/ScrollLink';
 
-const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
+const Header = ({
+  className,
+  handleToggleDrawer,
+  open,
+  cycleOpen,
+}: HeaderProps) => {
   const handleSignin = (
     e: React.MouseEvent<HTMLButtonElement, globalThis.MouseEvent>
   ) => {
@@ -23,39 +29,27 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
     <header className={`${className ?? ''}`}>
       <div className='header-main__wrapper'>
         <Link className='header-main__left' href={'/'}>
-          {logo && <Image src={logo} alt='Logo' width={48} height={48} />}
+          <Image src={logo} alt='Logo' width={48} />
         </Link>
-        <div className='header-main__right'>
+        <nav className='header-main__right'>
           <ul className='flex-row flex-wrap items-center justify-end hidden gap-4 lg:inline-flex'>
             <li>
-              <Link href={'#banner'} scroll>
-                Trang chủ
-              </Link>
+              <ScrollLink href={'#banner'}>Trang chủ</ScrollLink>
             </li>
             <li>
-              <Link href={'#food'} scroll>
-                Thực phẩm
-              </Link>
+              <ScrollLink href={'#food'}>Thực phẩm</ScrollLink>
             </li>
             <li>
-              <Link href={'#services'} scroll>
-                Dịch vụ
-              </Link>
+              <ScrollLink href={'#services'}>Dịch vụ</ScrollLink>
             </li>
             <li>
-              <Link href={'#about-us'} scroll>
-                Về chúng tôi
-              </Link>
+              <ScrollLink href={'#about-us'}>Về chúng tôi</ScrollLink>
             </li>
             <li>
-              <Link href={'#contact-us'} scroll>
-                Liên hệ
-              </Link>
+              <ScrollLink href={'#contact-us'}>Liên hệ</ScrollLink>
             </li>
             <li>
-              <Link href={'#maps'} scroll>
-                Bản đồ
-              </Link>
+              <ScrollLink href={'#maps'}>Bản đồ</ScrollLink>
             </li>
             <li>
               <Link
@@ -83,7 +77,7 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
                   className='!shadow-2xl flex justify-center items-center gap-3'
                   onClick={e => handleSignin(e)}
                 >
-                  Sign In
+                  Đăng nhập
                 </button>
               </li>
             )}
@@ -106,9 +100,9 @@ const Header = ({ className, handleToggleDrawer }: HeaderProps) => {
             )}
           </ul>
           <div className='flex flex-col items-center justify-center burger-menu lg:hidden'>
-            Menu
+            <button onClick={cycleOpen}>{open ? 'Close' : 'Open'}</button>
           </div>
-        </div>
+        </nav>
       </div>
     </header>
   );

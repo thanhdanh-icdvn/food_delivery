@@ -8,10 +8,10 @@
     @apply text-secondary leading-[1.5] text-[16px] z-[1];
   }
   .header-main {
-    @apply z-10 py-2 font-medium bg-white text-secondary;
+    @apply py-2 font-medium bg-white text-secondary;
   }
   .header-main {
-    @apply z-10 flex flex-row items-start justify-between shadow-mat-1;
+    @apply z-50 flex flex-row items-start justify-between shadow-mat-1;
   }
   .header-main__wrapper {
     @apply container flex justify-between px-4 mx-auto lg:px-5;
@@ -75,7 +75,7 @@
   }
 
   .banner .m-delivery-and-pickup {
-    @apply w-full lg:w-[42.083vw] flex flex-col bg-white  rounded-lg mt-8 z-[1] divide-y;
+    @apply w-full lg:w-[42.083vw] flex flex-col bg-white  rounded-lg mt-8 z-10 divide-y;
   }
   .banner .m-delivery-and-pickup .tab-buttons,
   .banner .m-delivery-and-pickup .tab-content {
@@ -99,6 +99,7 @@
 
   .section {
     @apply py-[1.5rem];
+    scroll-margin-top: 50px;
   }
   .section__heading {
     @apply m-0;
@@ -256,14 +257,17 @@
     @apply flex flex-col md:w-1/2;
   }
   .contact-us__form {
-    @apply flex flex-row flex-wrap;
+    @apply flex flex-row flex-wrap gap-4 px-4;
   }
 
+  .input-wrap {
+    @apply w-full;
+  }
   .input-field {
-    @apply relative border-b-2 focus-within:border-blue-500 md:w-[calc(100%-2rem)] m-4 md:mb-[32px];
+    @apply relative border-b-2 focus-within:border-blue-500 md:w-[calc(100%-2rem)];
   }
   .input {
-    @apply block bg-transparent appearance-none focus:outline-none;
+    @apply block w-full bg-transparent appearance-none focus:outline-none;
   }
 
   .footer-main {

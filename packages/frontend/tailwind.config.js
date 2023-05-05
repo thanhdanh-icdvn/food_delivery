@@ -78,6 +78,7 @@ const colorPalette = {
     700: '#196e85',
     800: '#1d5b6d',
     900: '#1d4c5c',
+    DEFAULT: '#17a2b8',
   },
   danger: {
     50: '#fef2f2',
@@ -90,6 +91,7 @@ const colorPalette = {
     700: '#b7192c',
     800: '#99182c',
     900: '#83182c',
+    DEFAULT: '#ec474f',
   },
   warning: {
     50: '#fff8eb',
@@ -102,6 +104,7 @@ const colorPalette = {
     700: '#b47409',
     800: '#92610e',
     900: '#78510f',
+    DEFAULT: '#f59e0b',
   },
   pending: {
     50: '#fff3ed',
@@ -114,6 +117,7 @@ const colorPalette = {
     700: '#c24a0c',
     800: '#9a4112',
     900: '#7c3612',
+    DEFAULT: '#f96416',
   },
   dark: {
     50: '#f5f7f8',
@@ -126,6 +130,7 @@ const colorPalette = {
     700: '#39434c',
     800: '#31383e',
     900: '#212529',
+    DEFAULT: '#576875',
   },
   success: {
     50: '#f1fcf2',
@@ -138,6 +143,7 @@ const colorPalette = {
     700: '#1f7634',
     800: '#1e5d2d',
     900: '#1a4d27',
+    DEFAULT: '#32b550',
   },
 };
 /* This is the tailwind config file. */
@@ -171,6 +177,7 @@ module.exports = {
       backgroundImage: {
         banner: 'url(../assets/images/bg_banner@2x.png)',
         bannerContent: 'url(../assets/images/bg_banner_bowl.png)',
+        logo: 'url(../assets/images/logo.webp)',
         login: 'url(../assets/images/bg_login.svg)',
       },
     },
